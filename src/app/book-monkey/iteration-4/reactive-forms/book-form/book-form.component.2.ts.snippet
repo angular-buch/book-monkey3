@@ -1,0 +1,29 @@
+// ...
+
+export class BookFormComponent implements OnInit {
+  // ...
+
+  ngOnInit() {
+    /*BS*/this.initForm();/*BE*/
+  }
+  /*BS*/
+  private initForm() {
+    if (this.bookForm) { return; }
+
+    this.bookForm = this.fb.group({
+      title: ['', Validators.required],
+      subtitle: [''],
+      isbn: ['', [
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(13)
+      ]],
+      description: [''],
+      authors: this.buildAuthorsArray(['']),
+      thumbnails: this.buildThumbnailsArray([
+        { title: '', url: '' }
+      ]),
+      published: []
+    });
+  }/*BE*/
+}

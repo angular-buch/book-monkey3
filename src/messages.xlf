@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="BookFormComponent:book form" datatype="html">
+        <source>Buchformular</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book title" datatype="html">
+        <source>Buchtitel</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book subtitle" datatype="html">
+        <source>Untertitel</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book isbn" datatype="html">
+        <source>ISBN-Nummer</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book published date" datatype="html">
+        <source>Erscheinungsdatum</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book authors" datatype="html">
+        <source>Autoren</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:author placeholder" datatype="html">
+        <source>Autor</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book description" datatype="html">
+        <source>Beschreibung</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book thumbnails" datatype="html">
+        <source>Bilder</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book url placeholder" datatype="html">
+        <source>http://bild_Url</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book thumbnail placeholder" datatype="html">
+        <source>Bild Titel</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookFormComponent:book form save" datatype="html">
+        <source>Speichern</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="AppComponent:home" datatype="html">
+        <source>Home</source>
+        <target/>
+        <note priority="1" from="description">Text of the link to the home screen</note>
+      </trans-unit>
+      <trans-unit id="AppComponent:book" datatype="html">
+        <source>Bücher</source>
+        <target/>
+        <note priority="1" from="description">Text of the link to the books screen</note>
+      </trans-unit>
+      <trans-unit id="AppComponent:admin" datatype="html">
+        <source>Administration</source>
+        <target/>
+        <note priority="1" from="description">Text of the link to the admin screen</note>
+      </trans-unit>
+      <trans-unit id="HomeComponent:header" datatype="html">
+        <source>Home</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="HomeComponent:tagline" datatype="html">
+        <source>Das ist der BookMonkey.</source>
+        <target/>
+        <note priority="1" from="description">a proud sentence about the project</note>
+      </trans-unit>
+      <trans-unit id="HomeComponent:book list link" datatype="html">
+        <source>Buchliste ansehen</source>
+        <target/>
+        <note priority="1" from="description">Text of the link to the books screen</note>
+      </trans-unit>
+      <trans-unit id="SearchComponent:header" datatype="html">
+        <source>Suche...</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookDetailsComponent:book authors" datatype="html">
+        <source>Autoren</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookDetailsComponent:book isbn" datatype="html">
+        <source>ISBN</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookDetailsComponent:book published date" datatype="html">
+        <source>Erschienen</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookDetailsComponent:book rating" datatype="html">
+        <source>Rating</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookDetailsComponent:book description" datatype="html">
+        <source>Beschreibung</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookDetailsComponent:book delete" datatype="html">
+        <source>Buch löschen</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookDetailsComponent:book edit" datatype="html">
+        <source>Buch bearbeiten</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookListComponent:no book" datatype="html">
+        <source>Es wurden noch keine Bücher eingetragen.</source>
+        <target/>
+      </trans-unit>
+      <trans-unit id="BookListComponent:loading data" datatype="html">
+        <source>Daten werden geladen...</source>
+        <target/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

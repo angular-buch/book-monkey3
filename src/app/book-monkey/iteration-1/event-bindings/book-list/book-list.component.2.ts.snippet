@@ -1,0 +1,19 @@
+@Component({
+  // ...
+})
+export class BookListComponent implements OnInit {
+  books: Book[];
+  @Output() /*BS*/showDetailsEvent/*BE*/ = new EventEmitter<Book>();
+
+  /*BS*/ngOnInit()/*BE*/ {
+    this.books = [
+      // ...
+    ]
+  }
+
+  // im HTML:
+  // <a *ngFor="let b of books" [book]="b" (click)="showDetails(b)"></a>
+  /*BS*/showDetails/*BE*/(book: Book) {
+    this.showDetailsEvent.emit(book);
+  }
+}

@@ -1,0 +1,18 @@
+import { Component, ViewChild, OnInit} from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { BookFactory } from '../shared/book-factory';
+
+@Component({
+  selector: 'bm-book-form',
+  templateUrl: './book-form.component.html',
+  styleUrls: ['./book-form.component.css']
+})
+export class BookFormComponent implements OnInit {
+
+  book = BookFactory.empty();
+  @ViewChild('bookForm') bookForm: NgForm;
+
+  ngOnInit() {
+  }
+}

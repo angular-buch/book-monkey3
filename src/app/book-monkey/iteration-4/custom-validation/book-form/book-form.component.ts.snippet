@@ -1,0 +1,40 @@
+// .../*BS*/
+import { BookValidators } from '../shared/book.validators';
+import { BookExistsValidatorService } from '../shared/book-exists-validator.service';/*BE*/
+
+@Component({
+  selector: 'bm-book-form',
+  templateUrl: './book-form.component.html',
+  styleUrls: ['./book-form.component.css']
+})
+export class BookFormComponent implements OnInit, OnChanges {
+
+  constructor(
+    private fb: FormBuilder/*BS*/,
+    private bookExistsValidator: BookExistsValidatorService/*BE*/
+  ) { }
+
+  // ...
+
+  private initForm() {
+    if (this.bookForm) { return; }
+
+    this.bookForm = this.fb.group({
+      // ...
+      /*BS*/isbn: ['', [
+        Validators.required,
+        BookValidators.isbnFormat
+      ], this.editing ? null : [this.bookExistsValidator]],/*BE*/
+      description: [''],
+      // ...
+    });
+  }
+
+  // ...
+
+  private buildAuthorsArray(values: string[]): FormArray {
+    return this.fb.array(values, /*BS*/BookValidators.atLeastOneAuthor/*BE*/);
+  }
+
+  // ...
+}

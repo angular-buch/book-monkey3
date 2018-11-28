@@ -1,0 +1,17 @@
+// ...
+import { CanNavigateToAdminGuard } from './can-navigate-to-admin.guard';
+
+export const routes: Routes = [
+  // ...
+  {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule',/*BS*/
+    canActivate: [CanNavigateToAdminGuard]/*BE*/
+  }
+];
+
+@NgModule({
+  // ...
+  providers: [/*BS*/CanNavigateToAdminGuard/*BE*/]
+})
+export class AppRoutingModule { }

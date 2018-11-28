@@ -1,0 +1,17 @@
+// .../*BS*/
+import { CreateBookComponent } from './create-book/create-book.component';
+/*BE*/
+
+export const routes: Routes = [
+  // .../*BS*/
+  {
+    path: 'admin',
+    redirectTo: 'admin/create',
+    pathMatch: 'full'
+  },
+  {
+    path: 'admin/create',
+    component: CreateBookComponent
+  }/*BE*/
+];
+// ...

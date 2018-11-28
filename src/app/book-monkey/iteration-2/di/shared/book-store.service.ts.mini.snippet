@@ -1,0 +1,16 @@
+@Injectable({
+  providedIn: 'root'
+})
+export class BookStoreService {
+  books: Book[];
+
+  constructor() {
+    this.books = [
+      // ...
+    ];
+  }
+/*BS*/
+  getAll() {
+    return this.books;
+  }/*BE*/
+}

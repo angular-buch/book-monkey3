@@ -1,0 +1,15 @@
+// ...
+
+export class BookFormComponent implements OnInit {
+  // ...
+  /*BS*/
+  private buildAuthorsArray(values: string[]): FormArray {
+    return this.fb.array(values, Validators.required);
+  }
+
+  private buildThumbnailsArray(values: Thumbnail[]): FormArray {
+    return this.fb.array(
+      values.map(t => this.fb.group(t))
+    );
+  }/*BE*/
+}

@@ -1,0 +1,22 @@
+// ...
+import { BooksModule } from './book/books.module';
+import { AdminModule } from './admin/admin.module';
+
+@NgModule({
+  declarations: [AppComponent, HomeComponent, SearchComponent],
+  imports: [
+    // .../*BS*/
+    BooksModule,
+    AdminModule/*BE*/
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    { provide: LOCALE_ID, useValue: 'de' }
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeDe);
+  }
+}

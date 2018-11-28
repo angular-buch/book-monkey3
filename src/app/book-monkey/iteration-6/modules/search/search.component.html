@@ -1,0 +1,16 @@
+<div class="ui search" [class.loading]="isLoading">
+  <div class="ui icon input">
+    <input class="prompt" type="text" #searchTerm
+      (keyup)="keyup$.next(searchTerm.value)">
+    <i class="search icon"></i>
+  </div>
+
+  <div class="results transition"
+    [class.visible]="foundBooks.length">
+    <a class="result"
+      *ngFor="let book of foundBooks"
+      [routerLink]="['..', 'books', book.isbn]">
+      {{ book.title }}
+    </a>
+  </div>
+</div>

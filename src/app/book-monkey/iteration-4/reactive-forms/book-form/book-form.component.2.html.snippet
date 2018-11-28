@@ -1,0 +1,21 @@
+<label>Autoren</label><!--BS-->
+<button type="button" class="ui mini button"
+  (click)="addAuthorControl()">
+  + Autor
+</button><!--BE-->
+<div class="fields" formArrayName="authors">
+  <!-- ... -->
+</div>
+
+<!-- ... -->
+
+<label>Bilder</label><!--BS-->
+<button type="button" class="ui mini button"
+  (click)="addThumbnailControl()">
+  + Bild
+</button><!--BE-->
+<div formArrayName="thumbnails">
+  <!-- ... -->
+</div>
+
+<!-- ... -->

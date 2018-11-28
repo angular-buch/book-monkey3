@@ -1,0 +1,23 @@
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';/*BS*/
+import 'rxjs/add/operator/switchMap';/*BE*/
+
+import { Book } from '../shared/book';
+import { BookStoreService } from '../shared/book-store.service';
+
+// ...
+export class SearchComponent implements OnInit {
+
+  // ...
+  foundBooks: Book[] = [];
+
+  constructor(private bs: BookStoreService) { }
+
+  ngOnInit() {
+    this.keyup
+      .debounceTime(500)
+      .distinctUntilChanged()
+      .switchMap(searchTerm => this.bs.getAllSearch(searchTerm))
+      .subscribe(books => this.foundBooks = books);
+  }
+}

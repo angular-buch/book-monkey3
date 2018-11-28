@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE messagebundle [
+<!ELEMENT messagebundle (msg)*>
+<!ATTLIST messagebundle class CDATA #IMPLIED>
+
+<!ELEMENT msg (#PCDATA|ph|source)*>
+<!ATTLIST msg id CDATA #IMPLIED>
+<!ATTLIST msg seq CDATA #IMPLIED>
+<!ATTLIST msg name CDATA #IMPLIED>
+<!ATTLIST msg desc CDATA #IMPLIED>
+<!ATTLIST msg meaning CDATA #IMPLIED>
+<!ATTLIST msg obsolete (obsolete) #IMPLIED>
+<!ATTLIST msg xml:space (default|preserve) "default">
+<!ATTLIST msg is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<messagebundle>
+  <msg id="BookFormComponent:book form">Buchformular</msg>
+  <msg id="BookFormComponent:book title">Buchtitel</msg>
+  <msg id="BookFormComponent:book subtitle">Untertitel</msg>
+  <msg id="BookFormComponent:book isbn">ISBN-Nummer</msg>
+  <msg id="BookFormComponent:book published date">Erscheinungsdatum</msg>
+  <msg id="BookFormComponent:authors">Autoren</msg>
+  <msg id="BookFormComponent:author placeholder">Autor</msg>
+  <msg id="BookFormComponent:book description">Beschreibung</msg>
+  <msg id="BookFormComponent:book thumbnails">Bilder</msg>
+  <msg id="BookFormComponent:book url placeholder">http://bild_Url</msg>
+  <msg id="BookFormComponent:book thumbnail placeholder">Bild Titel</msg>
+  <msg id="BookFormComponent:book form save">Speichern</msg>
+  <msg id="AppComponent:home" desc="Text of the link to the home screen">Home</msg>
+  <msg id="AppComponent:book" desc="Text of the link to the books screen">Bücher</msg>
+  <msg id="AppComponent:admin" desc="Text of the link to the admin screen">Administration</msg>
+  <msg id="HomeComponent:header">Home</msg>
+  <msg id="HomeComponent:tagline" desc="a proud sentence about the project">Das ist der BookMonkey.</msg>
+  <msg id="HomeComponent:book list link" desc="Text of the link to the books screen">Buchliste ansehen</msg>
+  <msg id="SearchComponent:header">Suche...</msg>
+  <msg id="BookDetailsComponent:book authors">Autoren</msg>
+  <msg id="BookDetailsComponent:book isbn">ISBN</msg>
+  <msg id="BookDetailsComponent:book published date">Erschienen</msg>
+  <msg id="BookDetailsComponent:book rating">Rating</msg>
+  <msg id="BookDetailsComponent:book description">Beschreibung</msg>
+  <msg id="BookDetailsComponent:book delete">Buch löschen</msg>
+  <msg id="BookDetailsComponent:book edit">Buch bearbeiten</msg>
+  <msg id="BookListComponent:no book">Es wurden noch keine Bücher eingetragen.</msg>
+  <msg id="BookListComponent:loading data">Daten werden geladen...</msg>
+</messagebundle>

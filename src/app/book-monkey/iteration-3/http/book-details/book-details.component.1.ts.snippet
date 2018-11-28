@@ -1,0 +1,16 @@
+// ... /*BS*/
+import { BookStoreService } from '../shared/book-store.service';/*BE*/
+
+export class BookDetailsComponent implements OnInit {
+  // ...
+  constructor(/*BS*/
+    private bs: BookStoreService,/*BE*/
+  ) { }
+
+  ngOnInit() {
+    const params = this.route.snapshot.params;/*BS*/
+    this.bs.getSingle(params['isbn'])
+      .subscribe(b => this.book = b);/*BE*/
+  }
+  // ...
+}

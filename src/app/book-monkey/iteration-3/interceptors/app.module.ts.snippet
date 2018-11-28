@@ -1,0 +1,17 @@
+// ...
+/*BS*/import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { TokenInterceptor } from './shared/token-interceptor';/*BE*/
+
+@NgModule({
+  // ...
+  providers: /*BS*/[
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ]/*BE*/,
+  // ...
+})
+export class AppModule { }

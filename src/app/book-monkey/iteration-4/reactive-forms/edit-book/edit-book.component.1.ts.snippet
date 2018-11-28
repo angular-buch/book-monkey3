@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { Book } from '../shared/book';
+import { BookStoreService } from '../shared/book-store.service';
+
+@Component({
+  selector: 'bm-edit-book',
+  templateUrl: './edit-book.component.html',
+  styleUrls: ['./edit-book.component.css']
+})
+export class EditBookComponent implements OnInit {
+
+  book: Book;
+
+  constructor(
+    private bs: BookStoreService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
+}
