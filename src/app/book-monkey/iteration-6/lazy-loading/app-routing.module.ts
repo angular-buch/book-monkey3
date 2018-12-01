@@ -15,11 +15,11 @@ export const routes: Routes = [
   },
   {
     path: 'books',
-    loadChildren: 'app/book-monkey/iteration-6/lazy-loading/books/books.module#BooksModule'
+    loadChildren: 'src/app/book-monkey/iteration-6/lazy-loading/books/books.module#BooksModule'
   },
   {
     path: 'admin',
-    loadChildren: 'app/book-monkey/iteration-6/lazy-loading/admin/admin.module#AdminModule'
+    loadChildren: 'src/app/book-monkey/iteration-6/lazy-loading/admin/admin.module#AdminModule'
   }
 ];
 
