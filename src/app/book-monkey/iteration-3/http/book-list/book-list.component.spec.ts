@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { Observable, of as ObservabelOf } from 'rxjs';
 
 import { async, inject, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -55,7 +54,7 @@ describe('BookListComponent', () => {
           DummyDetailsComponent],
         providers: [{
           provide: BookStoreService,
-          useValue: { getAll: () => Observable.of(expectedBooks) }
+          useValue: { getAll: () => ObservabelOf(expectedBooks) }
         }],
         imports: [/*BS*/
           RouterTestingModule.withRoutes([
@@ -82,10 +81,10 @@ describe('BookListComponent', () => {
 
   it('should navigate to details page by ISBN', async(inject([Location], (location) => {
 /*BS*/
-    fixture.nativeElement.querySelector('a').click();/*BE*/
+    fixture.nativeElement.querySelector('a').click(); /*BE*/
 
     fixture./*BS*/whenStable()/*BE*/.then(() => {/*BS*/
-      expect(location.path()).toEqual('/111');/*BE*/
+      expect(location.path()).toEqual('/111'); /*BE*/
     });
   })));
 });

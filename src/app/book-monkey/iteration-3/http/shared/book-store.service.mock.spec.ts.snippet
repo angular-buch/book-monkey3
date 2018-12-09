@@ -4,7 +4,7 @@ describe('BookStoreService', () => {
   beforeEach(() => {
 
     httpMock = {
-      get: () => Observable.of({
+      get: () => ObservableOf({
         json: () => expectedBooks
       })
     };

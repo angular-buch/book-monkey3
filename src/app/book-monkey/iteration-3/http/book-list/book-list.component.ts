@@ -14,6 +14,6 @@ export class BookListComponent implements OnInit {
   constructor(private bs: BookStoreService) { }
 
   ngOnInit() {/*BS*/
-    this.bs.getAll().subscribe(res => this.books = res);/*BE*/
+    this.bs.getAll().subscribe(res => this.books = res); /*BE*/
   }
 }

@@ -12,11 +12,9 @@
   <label>Untertitel</label>
   <input formControlName="subtitle">
 
-{{ editing }}
-
   <label>ISBN</label>
   <input formControlName="isbn"
-    [attr.disabled]="editing">
+   [attr.disabled]="editing ? '' : null">
   <bm-form-messages
     [control]="bookForm.get('isbn')"
     controlName="isbn">

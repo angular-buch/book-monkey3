@@ -14,7 +14,7 @@
 
   <label i18n="@@BookFormComponent:book isbn">ISBN-Nummer</label>
   <input formControlName="isbn"
-    [attr.disabled]="editing">
+    [attr.disabled]="editing ? '' : null">
   <bm-form-messages
     [control]="bookForm.get('isbn')"
     controlName="isbn">

@@ -1,7 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';/*BS*/
-import 'rxjs/add/observable/of';/*BE*/
+import { Observable, of as ObservableOf } from 'rxjs';/*BS*/
+/*BE*/
 
 import { Book } from '../shared/book';
 import { BookStoreService } from './book-store.service';
@@ -28,7 +28,7 @@ describe('BookStoreService', () => {
   beforeEach(() => {
 /*BS*/
     httpStub = {
-      get: () => Observable.of({
+      get: () => ObservableOf({
         json: () => expectedBooks
       })/*BE*/
     };

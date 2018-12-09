@@ -1,7 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+import { Observable, of as ObservableOf } from 'rxjs';
+
 
 import { Book } from '../shared/book';
 import { BookStoreService } from './book-store.service';
@@ -28,7 +28,7 @@ describe('BookStoreService', () => {
   beforeEach(() => {
 
     httpMock = {
-      get: () => Observable.of({
+      get: () => ObservableOf({
         json: () => expectedBooks
       })
     };
