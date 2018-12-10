@@ -27,15 +27,15 @@ export class AppComponent implements OnInit {
       const amountOfSlashes = (url.match(/\//g) || []).length;
 
       if (amountOfSlashes < 2) {
-        this.repoName = 'book-monkey2';
-        this.repositoryUrl = 'https://github.com/angular-buch/book-monkey2';
+        this.repoName = 'book-monkey3';
+        this.repositoryUrl = 'https://github.com/angular-buch/book-monkey3';
         return;
       } else {
         const parts = url.split('/');
         this.repoName = parts[1] + '-' + parts[2];
       }
 
-      this.repositoryUrl = 'https://github.com/book-monkey2-build/' + this.repoName;
+      this.repositoryUrl = 'https://github.com/book-monkey3-build/' + this.repoName;
     });
 
     fromEvent(window, 'resize').pipe(
