@@ -2,7 +2,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookListComponent } from './book-list.component';
-import { Book } from '../shared/book';
+import { Book } from '../../shared/book';
 
 describe('BookListComponent', () => {
   let component: BookListComponent;
@@ -22,12 +22,12 @@ describe('BookListComponent', () => {
     fixture.detectChanges();/*BE*/
   });
 
-  it('should emit the showDetailsEvent on click', () => {
+  /*it('should emit the showDetailsEvent on click', () => {
 
     let receivedBook: Book;
     component.showDetailsEvent.subscribe((book) => receivedBook = book);
 
     fixture.nativeElement.querySelector('a').click();
     expect(receivedBook.title).toBe('Angular');
-  });
+  });*/
 });
