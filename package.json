@@ -10,9 +10,7 @@
     "e2e": "ng e2e",
     "start-en": "ng serve --aot --locale=en --i18n-file=src/messages.en.xtb --i18n-format=xtb",
     "build-en": "ng build --aot --locale=en --i18n-file=src/messages.en.xtb --i18n-format=xtb",
-    "extract-i18n": "ng xi18n --i18nFormat=xmb",
-    "diff": "./step-diff.sh",
-    "tex": "node tex.js"
+    "extract-i18n": "ng xi18n --i18nFormat=xmb"
   },
   "private": true,
   "dependencies": {
@@ -50,10 +48,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6",
-    "copy-dir": "^0.4.0",
-    "diff2html-cli": "^2.6.0",
-    "replace-in-file": "^3.4.2",
-    "rimraf": "^2.6.2"
+    "typescript": "~3.1.6"
   }
 }
