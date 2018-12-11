@@ -1,20 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { CreateBookComponent } from './create-book.component';
+import { HomeComponent } from './home.component';
 
-describe('CreateBookComponent', () => {
-  let component: CreateBookComponent;
-  let fixture: ComponentFixture<CreateBookComponent>;
+describe('HomeComponent', () => {
+  let component: HomeComponent;
+  let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateBookComponent ],
+      declarations: [ HomeComponent ],
       schemas: [ NO_ERRORS_SCHEMA ],
       imports: [
-        HttpClientTestingModule,
         RouterTestingModule
       ]
     })
@@ -22,7 +20,7 @@ describe('CreateBookComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateBookComponent);
+    fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

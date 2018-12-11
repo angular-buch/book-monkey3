@@ -1,28 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 
-import { CreateBookComponent } from './create-book.component';
+import { SearchComponent } from './search.component';
 
-describe('CreateBookComponent', () => {
-  let component: CreateBookComponent;
-  let fixture: ComponentFixture<CreateBookComponent>;
+describe('SearchComponent', () => {
+  let component: SearchComponent;
+  let fixture: ComponentFixture<SearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateBookComponent ],
+      declarations: [ SearchComponent ],
       schemas: [ NO_ERRORS_SCHEMA ],
       imports: [
-        HttpClientTestingModule,
-        RouterTestingModule
+        HttpClientTestingModule
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateBookComponent);
+    fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

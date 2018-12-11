@@ -1,0 +1,70 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { BookFormComponent } from './book-form.component';
+import { Book } from '../../shared/book';
+
+describe('BookFormComponent', () => {
+  let component: BookFormComponent;
+  let fixture: ComponentFixture<BookFormComponent>;
+
+  const expectedBook: Book = {
+    isbn: '1234567890',
+    title: 'Test',
+    authors: ['Author 1'],
+    published: new Date(),
+    subtitle: 'something',
+    thumbnails: [{
+      title: 'my title',
+      url: 'https://via.placeholder.com/150'
+    }],
+    description: 'lorem ipsum dolor sit amet...'
+  };
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ BookFormComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ],
+      imports: [
+        RouterTestingModule,
+        HttpClientTestingModule,
+        ReactiveFormsModule
+      ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(BookFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  afterEach(() => {
+    component.bookForm.reset();
+  });
+
+  it('should initialize the form', () => {
+    expect(component.bookForm.value).toEqual({
+      isbn: '',
+      title: '',
+      authors: [''],
+      published: null,
+      subtitle: '',
+      thumbnails: [{
+        title: '',
+        url: ''
+      }],
+      description: ''
+    });
+  });
+
+  it('should display an book to edit', () => {
+    component.book = expectedBook;
+    fixture.detectChanges();
+    expect(component.bookForm.value).toBe(expectedBook);
+  });
+});
