@@ -38,16 +38,15 @@
   <label>Beschreibung</label>
   <textarea
     name="description"
-    [(ngModel)]="book.description"
-    rows="3"></textarea>
+    [(ngModel)]="book.description"></textarea>
 
   <label>Bild</label>
-  <div class="two fields" ngModelGroup="thumbnail">
+  <div class="two fields">
     <div class="field">
       <input
         name="url"
         [(ngModel)]="book.thumbnails[0].url"
-        placeholder="http://example.org/img.jpg">
+        placeholder="URL">
     </div>
     <div class="field">
       <input
