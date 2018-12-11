@@ -24,7 +24,7 @@
   <msg id="BookFormComponent:book form">Buchformular</msg>
   <msg id="BookFormComponent:book title">Buchtitel</msg>
   <msg id="BookFormComponent:book subtitle">Untertitel</msg>
-  <msg id="BookFormComponent:book isbn">ISBN-Nummer</msg>
+  <msg id="BookFormComponent:book isbn">ISBN</msg>
   <msg id="BookFormComponent:book published date">Erscheinungsdatum</msg>
   <msg id="BookFormComponent:authors">Autoren</msg>
   <msg id="BookFormComponent:author placeholder">Autor</msg>

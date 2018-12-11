@@ -12,22 +12,18 @@ import { BookFactory } from '../shared/book-factory';
 export class BookFormComponent implements OnInit {
 
   book = BookFactory.empty();
-  @ViewChild('bookForm') bookForm: NgForm;
-  /*BS*/@Output() submitBook = new EventEmitter<Book>();/*BE*/
 
-  ngOnInit() {
-  }
+  /*BS*/@Output() submitBook = new EventEmitter<Book>();/*BE*/
+  @ViewChild('bookForm') bookForm: NgForm;
+
   /*BS*/
   submitForm() {
-    const newBook = {
-      ...this.book,
-      authors: this.bookForm.value.authors.split(','),
-      thumbnails: [this.bookForm.value.thumbnail]
-    };
-
-    this.submitBook.emit(newBook);
+    this.submitBook.emit(this.book);
 
     this.book = BookFactory.empty();
     this.bookForm.reset();
   }/*BE*/
+
+  ngOnInit() {
+  }
 }

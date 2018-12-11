@@ -21,7 +21,7 @@ export class BookFormComponent implements OnInit, OnChanges {
 
     this.bookForm = this.fb.group({
       // ...
-      /*BS*/isbn: ['', [
+      /*BS*/isbn: [{ value: '', disabled: this.editing }, [
         Validators.required,
         BookValidators.isbnFormat
       ], this.editing ? null : [this.bookExistsValidator]],/*BE*/

@@ -1,6 +1,6 @@
 <form class="ui form"
-      #bookForm="ngForm"
-      (ngSubmit)="submitForm()">
+      (ngSubmit)="submitForm()"
+      #bookForm="ngForm">
 
   <label>Buchtitel</label>
   <input
@@ -18,7 +18,7 @@
     name="subtitle"
     [(ngModel)]="book.subtitle">
 
-  <label>ISBN-Nummer</label>
+  <label>ISBN</label>
   <input
     name="isbn"
     [(ngModel)]="book.isbn"
@@ -61,12 +61,12 @@
     [(ngModel)]="book.description"></textarea>
 
   <label>Bild</label>
-  <div class="two fields" ngModelGroup="thumbnail">
+  <div class="two fields">
     <div class="field">
       <input
         name="url"
         [(ngModel)]="book.thumbnails[0].url"
-        placeholder="http://example.org/img.jpg">
+        placeholder="URL">
     </div>
     <div class="field">
       <input

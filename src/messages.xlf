@@ -15,7 +15,7 @@
         <target/>
       </trans-unit>
       <trans-unit id="BookFormComponent:book isbn" datatype="html">
-        <source>ISBN-Nummer</source>
+        <source>ISBN</source>
         <target/>
       </trans-unit>
       <trans-unit id="BookFormComponent:book published date" datatype="html">

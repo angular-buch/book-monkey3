@@ -12,9 +12,8 @@
   <label i18n="@@BookFormComponent:book subtitle">Untertitel</label>
   <input formControlName="subtitle">
 
-  <label i18n="@@BookFormComponent:book isbn">ISBN-Nummer</label>
-  <input formControlName="isbn"
-    [attr.disabled]="editing ? '' : null">
+  <label i18n="@@BookFormComponent:book isbn">ISBN</label>
+  <input formControlName="isbn">
   <bm-form-messages
     [control]="bookForm.get('isbn')"
     controlName="isbn">

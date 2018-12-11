@@ -13,8 +13,7 @@
   <input formControlName="subtitle">
 
   <label>ISBN</label>
-  <input formControlName="isbn"
-   [attr.disabled]="editing ? '' : null">
+  <input formControlName="isbn">
   <bm-form-messages
     [control]="bookForm.get('isbn')"
     controlName="isbn">
