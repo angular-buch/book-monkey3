@@ -43,10 +43,6 @@ describe('BookFormComponent', () => {
     fixture.detectChanges();
   });
 
-  afterEach(() => {
-    component.bookForm.reset();
-  });
-
   it('should initialize the form', () => {
     expect(component.bookForm.value).toEqual({
       isbn: '',
@@ -62,9 +58,9 @@ describe('BookFormComponent', () => {
     });
   });
 
-  it('should display an book to edit', () => {
+  it('should display a book to edit', () => {
     component.book = expectedBook;
-    fixture.detectChanges();
-    expect(component.bookForm.value).toBe(expectedBook);
+    component.ngOnChanges();
+    expect(component.bookForm.value).toEqual(expectedBook);
   });
 });
