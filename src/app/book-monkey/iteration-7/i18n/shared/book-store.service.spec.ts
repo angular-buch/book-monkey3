@@ -7,7 +7,7 @@ import { BookStoreService } from './book-store.service';
 
 describe('BookStoreService', () => {
   let httpClient: HttpClient;
-  let httpTestingController: HttpTestingController;
+  let httpMock: HttpTestingController;
   let bs: BookStoreService;
 
   const expectedBooks: Book[] = [
@@ -35,13 +35,13 @@ describe('BookStoreService', () => {
 
     // Inject http, test controller and service-under-test to be referenced by each test
     httpClient = TestBed.get(HttpClient);
-    httpTestingController = TestBed.get(HttpTestingController);
+    httpMock = TestBed.get(HttpTestingController);
     bs = TestBed.get(BookStoreService);
   });
 
   afterEach(() => {
     // asserrt that there are no more pending reuests after every test
-    httpTestingController.verify();
+    httpMock.verify();
   });
 
   describe('#getAll', () => {
@@ -58,7 +58,7 @@ describe('BookStoreService', () => {
       );
 
       // BookStoreService should have made one request to get Books from expected URL
-      const req = httpTestingController.expectOne(apiUrl);
+      const req = httpMock.expectOne(apiUrl);
       expect(req.request.method).toEqual('GET');
 
       // respond with the mock
@@ -72,7 +72,7 @@ describe('BookStoreService', () => {
       );
 
       // BookStoreService should have made one request to get Books from expected URL
-      const req = httpTestingController.expectOne(apiUrl);
+      const req = httpMock.expectOne(apiUrl);
       expect(req.request.method).toEqual('GET');
 
       // respond with the mock
@@ -95,7 +95,7 @@ describe('BookStoreService', () => {
       );
 
       // BookStoreService should have made one request to get Books from expected URL
-      const req = httpTestingController.expectOne(`${apiUrl}/111`);
+      const req = httpMock.expectOne(`${apiUrl}/111`);
       expect(req.request.method).toEqual('GET');
 
       // respond with the mock
