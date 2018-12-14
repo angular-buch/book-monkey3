@@ -1,13 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormArray, AbstractControl, Validators, ValidationErrors } from '@angular/forms';
 import { Observable, of } from 'rxjs';
+import { By } from '@angular/platform-browser';
 
 import { FormMessagesComponent } from './form-messages.component';
 import { BookValidators } from '../shared/book.validators';
+import { DebugElement } from '@angular/core';
 
 describe('FormMessagesComponent', () => {
   let component: FormMessagesComponent;
   let fixture: ComponentFixture<FormMessagesComponent>;
+  let msgEl: HTMLElement;
 
   const expectedErrorMessages = {
     title: {
@@ -26,112 +29,161 @@ describe('FormMessagesComponent', () => {
     }
   };
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FormMessagesComponent ]
-    })
-    .compileComponents();
-  }));
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [FormMessagesComponent]
+    });
+
+    // create component and test fixture
     fixture = TestBed.createComponent(FormMessagesComponent);
+
+    // get test component from the fixture
     component = fixture.componentInstance;
+
+    // store message container
+    msgEl = fixture.nativeElement;
+  });
+
+  it('should display an error message indicating the title is required', () => {
+    const ctrl = new FormControl(null, Validators.required);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'title';
     fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.title.required);
   });
 
-  describe('title validation', () => {
-    beforeEach(() => {
-      component.controlName = 'title';
-    });
-
-    it('should mark formControl as invalid if value is null', () => {
-      component.control = new FormControl(null, Validators.required);
-      component.ngOnInit();
-      expect(component.control.valid).toBeFalsy();
-    });
-
-    it('should mark formControl as valid if value is not empty', () => {
-      component.control = new FormControl('title', Validators.required);
-      component.ngOnInit();
-      expect(component.control.valid).toBeTruthy();
-    });
+  it('should not display any error message when controlName is not in messages array', () => {
+    const ctrl = new FormControl(null, Validators.required);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'some wrong control name';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.title.required);
   });
 
-  describe('isbn validation', () => {
-    const syncValidators = [Validators.required, BookValidators.isbnFormat];
-    const asyncValidators = []; // TODO: add async Validator mock
-
-    beforeEach(() => {
-      component.controlName = 'isbn';
-    });
-
-    it('should mark formControl as invalid if value is null', () => {
-      component.control = new FormControl(null, syncValidators, asyncValidators);
-      component.ngOnInit();
-      expect(component.control.valid).toBeFalsy();
-    });
-
-    it('should mark formControl as invalid if value does not contain 10 or 13 characters', () => {
-      component.control = new FormControl('01234567890', syncValidators, asyncValidators);
-      component.ngOnInit();
-      expect(component.control.valid).toBeFalsy();
-    });
-
-    it('should mark formControl as valid value is a string with 10 characters', () => {
-      component.control = new FormControl('0123456789', syncValidators, asyncValidators);
-      component.ngOnInit();
-      expect(component.control.valid).toBeTruthy();
-    });
-
-    it('should mark formControl as valid value is a string with 13 characters', () => {
-      component.control = new FormControl('0123456789012', syncValidators, asyncValidators);
-      component.ngOnInit();
-      expect(component.control.valid).toBeTruthy();
-    });
+  it('should not display any error message when formControl is valid', () => {
+    const ctrl = new FormControl('Valid title', Validators.required);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'title';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeTruthy();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.title.required);
   });
 
-  describe('published validation', () => {
-    beforeEach(() => {
-      component.controlName = 'published';
-    });
-
-    it('should mark formControl as invalid if value is null', () => {
-      component.control = new FormControl(null, Validators.required);
-      component.ngOnInit();
-      expect(component.control.valid).toBeFalsy();
-    });
-
-    it('should mark formControl as valid value is not empty', () => {
-      component.control = new FormControl(new Date(), Validators.required);
-      component.ngOnInit();
-      expect(component.control.valid).toBeTruthy();
-    });
+  it('should not display any error message when formControl is pristine', () => {
+    const ctrl = new FormControl('Valid title', Validators.required);
+    component.control = ctrl;
+    component.controlName = 'title';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeTruthy();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.title.required);
   });
 
-  describe('authors validation', () => {
-    beforeEach(() => {
-      component.controlName = 'authors';
-    });
+  it('should not display any error formControl is not initialized', () => {
+    component.control = null;
+    component.controlName = 'title';
+    fixture.detectChanges();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.title.required);
+  });
 
-    it('should mark formArray as invalid if Array is empty', () => {
-      component.control = new FormArray([], BookValidators.atLeastOneAuthor);
-      component.ngOnInit();
-      expect(component.control.valid).toBeFalsy();
-    });
+  it('should not remove error message after formControl state changes to valid', () => {
+    const ctrl = new FormControl(null, Validators.required);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'title';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.title.required);
 
-    it('should mark formArray as invalid when FormControls in Array are all empty', () => {
-      component.control = new FormArray([new FormControl(), new FormControl()], BookValidators.atLeastOneAuthor);
-      component.ngOnInit();
-      expect(component.control.valid).toBeFalsy();
-    });
+    component.control.patchValue('title');
+    fixture.detectChanges();
+    expect(component.control.valid).toBeTruthy();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.title.required);
+  });
 
-    it('should mark formArray as valid when FormArray contains one FormControl with a non-empty Value', () => {
-      component.control = new FormArray([
-        new FormControl(),
-        new FormControl('Author1')
-      ], BookValidators.atLeastOneAuthor);
-      component.ngOnInit();
-      expect(component.control.valid).toBeTruthy();
-    });
+  it('should display an error message indicating the isbn is required', () => {
+    const ctrl = new FormControl(null, Validators.required);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'isbn';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.isbn.required);
+  });
+
+  it('should display an error message indicating the isbn is required', () => {
+    const ctrl = new FormControl(null, Validators.required);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'isbn';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.isbn.required);
+  });
+
+  it('should display an error message indicating the isbn format is wrong', () => {
+    const ctrl = new FormControl('012345678', BookValidators.isbnFormat);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'isbn';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.isbn.isbnFormat);
+
+    component.control.patchValue('0123456789');
+    fixture.detectChanges();
+    expect(component.control.valid).toBeTruthy();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.isbn.isbnFormat);
+
+    component.control.patchValue('0123456789012');
+    fixture.detectChanges();
+    expect(component.control.valid).toBeTruthy();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.isbn.isbnFormat);
+  });
+
+  // TODO: verify isbnExists work
+
+  it('should display an error message indicating the published data field is required', () => {
+    const ctrl = new FormControl(null, Validators.required);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'published';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.published.required);
+  });
+
+  it('should display an error message when no author has been set', () => {
+    const ctrl = new FormArray([], BookValidators.atLeastOneAuthor);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'authors';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.authors.atLeastOneAuthor);
+  });
+
+  it('should display an error message when FormControls in Array are all empty', () => {
+    const ctrl = new FormArray([ new FormControl(), new FormControl() ], BookValidators.atLeastOneAuthor);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'authors';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.authors.atLeastOneAuthor);
+  });
+
+  it('should display no error message when FormArray contains one FormControl with a non-empty Value', () => {
+    const ctrl = new FormArray([ new FormControl(), new FormControl('author2'), new FormControl() ], BookValidators.atLeastOneAuthor);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'authors';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeTruthy();
+    expect(msgEl.textContent).not.toContain(expectedErrorMessages.authors.atLeastOneAuthor);
   });
 });
