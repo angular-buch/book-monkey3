@@ -24,6 +24,19 @@ describe('BookFormComponent', () => {
     description: 'lorem ipsum dolor sit amet...'
   };
 
+  const emptyBookData: Book = {
+    isbn: '',
+    title: '',
+    authors: [''],
+    published: null,
+    subtitle: '',
+    thumbnails: [{
+      title: '',
+      url: ''
+    }],
+    description: ''
+  };
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ BookFormComponent ],
@@ -44,18 +57,7 @@ describe('BookFormComponent', () => {
   });
 
   it('should initialize the form', () => {
-    expect(component.bookForm.value).toEqual({
-      isbn: '',
-      title: '',
-      authors: [''],
-      published: null,
-      subtitle: '',
-      thumbnails: [{
-        title: '',
-        url: ''
-      }],
-      description: ''
-    });
+    expect(component.bookForm.value).toEqual(emptyBookData);
     expect(component.bookForm.valid).toBeFalsy();
   });
 
@@ -69,35 +71,22 @@ describe('BookFormComponent', () => {
   it('should add an author input field', () => {
     component.addAuthorControl();
     expect(component.bookForm.value).toEqual({
-      isbn: '',
-      title: '',
-      authors: ['', ''],
-      published: null,
-      subtitle: '',
-      thumbnails: [{
-        title: '',
-        url: ''
-      }],
-      description: ''
+      ...emptyBookData,
+      authors: ['', '']
     });
   });
 
   it('should add a Thumbnail FormGroup', () => {
     component.addThumbnailControl();
     expect(component.bookForm.value).toEqual({
-      isbn: '',
-      title: '',
-      authors: [''],
-      published: null,
-      subtitle: '',
+      ...emptyBookData,
       thumbnails: [{
         title: '',
         url: ''
       }, {
         title: '',
         url: ''
-      }],
-      description: ''
+      }]
     });
   });
 
