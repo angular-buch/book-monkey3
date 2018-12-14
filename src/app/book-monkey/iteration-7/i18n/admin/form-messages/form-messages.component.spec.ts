@@ -1,11 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormControl, FormArray, AbstractControl, Validators, ValidationErrors } from '@angular/forms';
 import { Observable, of } from 'rxjs';
-import { By } from '@angular/platform-browser';
 
 import { FormMessagesComponent } from './form-messages.component';
 import { BookValidators } from '../shared/book.validators';
-import { DebugElement } from '@angular/core';
+
+function bookExistsValidatorMock(control: AbstractControl): Observable<ValidationErrors | null> {
+   return control.value === '1111111111'
+    ? of({isbnExists: { valid: false }})
+    : of(null);
+}
 
 describe('FormMessagesComponent', () => {
   let component: FormMessagesComponent;
@@ -145,7 +149,15 @@ describe('FormMessagesComponent', () => {
     expect(msgEl.textContent).not.toContain(expectedErrorMessages.isbn.isbnFormat);
   });
 
-  // TODO: verify isbnExists work
+  it('should display an error message indicating the isbn already exists', () => {
+    const ctrl = new FormControl('1111111111', Validators.required, bookExistsValidatorMock);
+    ctrl.markAsDirty();
+    component.control = ctrl;
+    component.controlName = 'isbn';
+    fixture.detectChanges();
+    expect(component.control.valid).toBeFalsy();
+    expect(msgEl.textContent).toContain(expectedErrorMessages.isbn.isbnExists);
+  });
 
   it('should display an error message indicating the published data field is required', () => {
     const ctrl = new FormControl(null, Validators.required);
