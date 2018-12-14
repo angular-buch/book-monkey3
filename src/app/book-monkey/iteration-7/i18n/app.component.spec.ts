@@ -4,16 +4,15 @@ import { RouterLinkWithHref } from '@angular/router';
 import { By } from '@angular/platform-browser';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { HomeComponent } from './home.component';
-import { SearchComponent } from '../search/search.component';
+import { AppComponent } from './app.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent, SearchComponent ],
+      declarations: [ AppComponent ],
       imports: [
         RouterTestingModule,
         HttpClientTestingModule
@@ -23,9 +22,17 @@ describe('HomeComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  it('should have a link to /home', () => {
+    const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
+    const index = debugElements.findIndex(de => {
+      return de.properties['href'] === '/home';
+    });
+    expect(index).toBeGreaterThan(-1);
   });
 
   it('should have a link to /books', () => {
@@ -36,8 +43,11 @@ describe('HomeComponent', () => {
     expect(index).toBeGreaterThan(-1);
   });
 
-  it('should contain SearchComponent', () => {
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('bm-search')).not.toBe(null);
+  it('should have a link to /admin', () => {
+    const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
+    const index = debugElements.findIndex(de => {
+      return de.properties['href'] === '/admin';
+    });
+    expect(index).toBeGreaterThan(-1);
   });
 });
