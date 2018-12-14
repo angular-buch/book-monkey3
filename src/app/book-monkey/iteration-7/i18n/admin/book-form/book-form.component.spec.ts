@@ -56,11 +56,14 @@ describe('BookFormComponent', () => {
       }],
       description: ''
     });
+    expect(component.bookForm.valid).toBeFalsy();
   });
 
   it('should display a book to edit', () => {
     component.book = expectedBook;
     component.ngOnChanges();
     expect(component.bookForm.value).toEqual(expectedBook);
+    expect(component.bookForm.errors).toBeNull();
   });
+
 });
