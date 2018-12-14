@@ -1,8 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
+import { RouterLinkWithHref } from '@angular/router';
+import { By } from '@angular/platform-browser';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { HomeComponent } from './home.component';
+import { SearchComponent } from '../search/search.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -10,10 +14,10 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
-      schemas: [ NO_ERRORS_SCHEMA ],
+      declarations: [ HomeComponent, SearchComponent ],
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientTestingModule
       ]
     })
     .compileComponents();
@@ -25,7 +29,16 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should have a link to /books', () => {
+    const debugElements = fixture.debugElement.queryAll(By.directive(RouterLinkWithHref));
+    const index = debugElements.findIndex(de => {
+      return de.properties['href'] === '/books';
+    });
+    expect(index).toBeGreaterThan(-1);
+  });
+
+  it('should contain SearchComponent', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('bm-search')).not.toBe(null);
   });
 });
