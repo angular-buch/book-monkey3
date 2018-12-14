@@ -66,4 +66,39 @@ describe('BookFormComponent', () => {
     expect(component.bookForm.errors).toBeNull();
   });
 
+  it('should add an author input field', () => {
+    component.addAuthorControl();
+    expect(component.bookForm.value).toEqual({
+      isbn: '',
+      title: '',
+      authors: ['', ''],
+      published: null,
+      subtitle: '',
+      thumbnails: [{
+        title: '',
+        url: ''
+      }],
+      description: ''
+    });
+  });
+
+  it('should add a Thumbnail FormGroup', () => {
+    component.addThumbnailControl();
+    expect(component.bookForm.value).toEqual({
+      isbn: '',
+      title: '',
+      authors: [''],
+      published: null,
+      subtitle: '',
+      thumbnails: [{
+        title: '',
+        url: ''
+      }, {
+        title: '',
+        url: ''
+      }],
+      description: ''
+    });
+  });
+
 });
