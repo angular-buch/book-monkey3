@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Book } from './shared/book';
 
-/*BS*/type ViewState = 'list' | 'detail';/*BE*/
+type ViewState = 'list' | 'detail';
 
 @Component({
   selector: 'bm-root',
@@ -11,7 +11,7 @@ import { Book } from './shared/book';
 })
 export class AppComponent {
   book: Book;
-  /*BS*/viewState: ViewState = 'list';
+  viewState: ViewState = 'list';
 
   showList() {
     this.viewState = 'list';
@@ -20,5 +20,5 @@ export class AppComponent {
   showDetails(book: Book) {
     this.book = book;
     this.viewState = 'detail';
-  }/*BE*/
+  }
 }

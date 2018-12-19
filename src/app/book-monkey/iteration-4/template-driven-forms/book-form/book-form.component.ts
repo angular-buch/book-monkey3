@@ -1,7 +1,7 @@
-import { Component, ViewChild, OnInit/*BS*/, Output, EventEmitter/*BE*/ } from '@angular/core';
+import { Component, ViewChild, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-/*BS*/import { Book } from '../shared/book';/*BE*/
+import { Book } from '../shared/book';
 import { BookFactory } from '../shared/book-factory';
 
 @Component({
@@ -13,16 +13,16 @@ export class BookFormComponent implements OnInit {
 
   book = BookFactory.empty();
 
-  /*BS*/@Output() submitBook = new EventEmitter<Book>();/*BE*/
+  @Output() submitBook = new EventEmitter<Book>();
   @ViewChild('bookForm') bookForm: NgForm;
 
-  /*BS*/
+  
   submitForm() {
     this.submitBook.emit(this.book);
 
     this.book = BookFactory.empty();
     this.bookForm.reset();
-  }/*BE*/
+  }
 
   ngOnInit() {
   }

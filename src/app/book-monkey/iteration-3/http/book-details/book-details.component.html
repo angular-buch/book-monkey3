@@ -28,11 +28,11 @@
   <div class="ui small images">
     <img *ngFor="let thumbnail of book.thumbnails"
       [src]="thumbnail.url">
-  </div><!--BS-->
+  </div>
   <button class="ui tiny red labeled icon button"
           (click)="removeBook()">
     <i class="remove icon"></i> Buch löschen
-  </button><!--BE-->
+  </button>
 </div>
 
 <ng-template #errorMessage>

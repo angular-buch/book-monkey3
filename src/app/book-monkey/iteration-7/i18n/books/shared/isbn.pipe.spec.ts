@@ -4,19 +4,19 @@ describe('IsbnPipe', () => {
 
   let pipe: IsbnPipe;
 
-  beforeEach(() => {/*BS*/
-    pipe = new IsbnPipe(); /*BE*/
+  beforeEach(() => {
+    pipe = new IsbnPipe(); 
   });
 
-  it('should ignore empty values values', () => {/*BS*/
-    expect(pipe.transform('')).toBe(null); /*BE*/
+  it('should ignore empty values values', () => {
+    expect(pipe.transform('')).toBe(null); 
   });
 
-  it('should ignore values of null', () => {/*BS*/
-    expect(pipe.transform(null)).toBe(null); /*BE*/
+  it('should ignore values of null', () => {
+    expect(pipe.transform(null)).toBe(null); 
   });
 
-  it('should format an ISBN with a dash', () => {/*BS*/
-    expect(pipe.transform('9783864903571')).toBe('978-3864903571'); /*BE*/
+  it('should format an ISBN with a dash', () => {
+    expect(pipe.transform('9783864903571')).toBe('978-3864903571'); 
   });
 });

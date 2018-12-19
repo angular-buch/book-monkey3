@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Book } from '../shared/book';/*BS*/
-import { BookStoreService } from '../shared/book-store.service';/*BE*/
+import { Book } from '../shared/book';
+import { BookStoreService } from '../shared/book-store.service';
 
 @Component({
   selector: 'bm-book-details',
@@ -19,9 +19,9 @@ export class BookDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const params = this.route.snapshot.params;/*BS*/
+    const params = this.route.snapshot.params;
     this.bs.getSingle(params['isbn'])
-      .subscribe(b => this.book = b);/*BE*/
+      .subscribe(b => this.book = b);
   }
 
   getRating(num: number) {

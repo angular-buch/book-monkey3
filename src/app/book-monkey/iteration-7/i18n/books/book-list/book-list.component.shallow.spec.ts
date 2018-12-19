@@ -8,18 +8,18 @@ describe('BookListComponent', () => {
   let component: BookListComponent;
   let fixture: ComponentFixture<BookListComponent>;
 
-  beforeEach(/*BS*/async/*BE*/(() => {/*BS*/
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
         declarations: [BookListComponent],
         schemas: [NO_ERRORS_SCHEMA]
       })
-      .compileComponents();/*BE*/
+      .compileComponents();
   }));
 
-  beforeEach(() => {/*BS*/
+  beforeEach(() => {
     fixture = TestBed.createComponent(BookListComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();/*BE*/
+    fixture.detectChanges();
   });
 
   /*it('should emit the showDetailsEvent on click', () => {
