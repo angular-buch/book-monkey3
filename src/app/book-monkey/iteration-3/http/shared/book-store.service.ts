@@ -8,7 +8,7 @@ import { Book } from './book';
   providedIn: 'root'
 })
 export class BookStoreService {
-  private api = 'https://api.angular.schule';
+  private api = 'https://api3.angular-buch.com';
 
   constructor(private http: HttpClient) {}
 
