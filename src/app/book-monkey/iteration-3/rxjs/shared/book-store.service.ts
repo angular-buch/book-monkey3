@@ -11,7 +11,7 @@ import { BookFactory } from './book-factory';
   providedIn: 'root'
 })
 export class BookStoreService {
-  private api = 'https://book-monkey2-api.angular-buch.com';
+  private api = 'https://api.angular.schule';
 
   constructor(private http: HttpClient) {}
 

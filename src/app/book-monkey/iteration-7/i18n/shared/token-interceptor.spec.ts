@@ -8,7 +8,7 @@ import { TokenInterceptor } from './token-interceptor';
 describe(`TokenInterceptor`, () => {
   let bs: BookStoreService;
   let httpMock: HttpTestingController;
-  const apiUrl = 'https://book-monkey2-api.angular-buch.com';
+  const apiUrl = 'https://api.angular.schule';
 
   beforeEach(() => {
     TestBed.configureTestingModule({

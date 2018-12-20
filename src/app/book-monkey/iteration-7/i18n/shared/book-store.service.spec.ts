@@ -45,7 +45,7 @@ describe('BookStoreService', () => {
   });
 
   describe('#getAll', () => {
-    const apiUrl = 'https://book-monkey2-api.angular-buch.com/books';
+    const apiUrl = 'https://api.angular.schule/books';
 
     beforeEach(() => {
       bs = TestBed.get(BookStoreService);
@@ -82,7 +82,7 @@ describe('BookStoreService', () => {
 
 
   describe('#getSingle', () => {
-    const apiUrl = `https://book-monkey2-api.angular-buch.com/book`;
+    const apiUrl = `https://api.angular.schule/book`;
 
     beforeEach(() => {
       bs = TestBed.get(BookStoreService);
