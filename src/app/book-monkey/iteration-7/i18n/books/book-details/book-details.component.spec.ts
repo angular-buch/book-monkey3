@@ -50,7 +50,11 @@ describe('BookDetailsComponent', () => {
         },
         {
           provide: ActivatedRoute,
-          useValue: { snapshot: { params: {'isbn': '111'} } }
+          useValue: {
+            snapshot: {
+              paramMap: { get: (key) => '111' }
+            }
+          }
         }
       ],
       imports: [
