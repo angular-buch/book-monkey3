@@ -1,9 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
-import { of as ObservableOf } from 'rxjs';
-
 import { async, inject, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { of } from 'rxjs';
 
 import { BookListComponent } from './book-list.component';
 import { BookStoreService } from '../../shared/book-store.service';
@@ -43,24 +42,23 @@ describe('BookListComponent', () => {
   ];
 
   beforeEach(async(() => {
-
     TestBed.configureTestingModule({
-        declarations: [
-          DummyOutletComponent,
-          BookListComponent,
-          DummyBookListItemComponent,
-          DummyDetailsComponent],
-        providers: [{
-          provide: BookStoreService,
-          useValue: { getAll: () => ObservableOf(expectedBooks) }
-        }],
-        imports: [
-          RouterTestingModule.withRoutes([
-            { path: ':isbn', component: DummyDetailsComponent }
-          ])
-        ]
-      })
-      .compileComponents();
+      declarations: [
+        DummyOutletComponent,
+        BookListComponent,
+        DummyBookListItemComponent,
+        DummyDetailsComponent],
+      providers: [{
+        provide: BookStoreService,
+        useValue: { getAll: () => of(expectedBooks) }
+      }],
+      imports: [
+        RouterTestingModule.withRoutes([
+          { path: ':isbn', component: DummyDetailsComponent }
+        ])
+      ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(async(() => {
@@ -71,16 +69,13 @@ describe('BookListComponent', () => {
   }));
 
   it('should display books', () => {
-
     expect(component.books.length).toBe(2);
     expect(component.books[0].isbn).toBe('111');
     expect(component.books[1].isbn).toBe('222');
   });
 
   it('should navigate to details page by ISBN', async(inject([Location], (location) => {
-
     fixture.nativeElement.querySelector('bm-book-list-item').click();
-
     fixture.whenStable().then(() => {
       expect(location.path()).toEqual('/111');
     });
