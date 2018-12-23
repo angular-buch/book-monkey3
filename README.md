@@ -13,29 +13,29 @@ Die einzelnen Schritte sind außerdem jeweils als einzelne Repositorys verfügba
 
 
 * __Iteration 1 – Komponenten & Template-Syntax__
-  1. _[Komponenten](https://book-monkey3.angular-buch.com/iteration-1/components)_ - [Demo](https://iteration-1-components-bm3.angular-buch.com)
-  2. _[Property Bindings](https://book-monkey3.angular-buch.com/iteration-1/property-bindings)_ - [Demo](https://iteration-1-property-bindings-bm3.angular-buch.com)
-  3. _[Event Bindings](https://book-monkey3.angular-buch.com/iteration-1/event-bindings)_ - [Demo](https://iteration-1-event-bindings-bm3.angular-buch.com)
+  1. _[Komponenten](https://book-monkey3.angular-buch.com/iteration-1/components)_ - [Standalone Demo](https://iteration-1-components-bm3.angular-buch.com)
+  2. _[Property Bindings](https://book-monkey3.angular-buch.com/iteration-1/property-bindings)_ - [Standalone Demo](https://iteration-1-property-bindings-bm3.angular-buch.com)
+  3. _[Event Bindings](https://book-monkey3.angular-buch.com/iteration-1/event-bindings)_ - [Standalone Demo](https://iteration-1-event-bindings-bm3.angular-buch.com)
 * __Iteration 2 – Services & Routing__
-  1. _[Dependency Injection](https://book-monkey3.angular-buch.com/iteration-2/di)_ - [Demo](https://iteration-2-di-bm3.angular-buch.com)
-  2. _[Routing](https://book-monkey3.angular-buch.com/iteration-2/routing)_ - [Demo](https://iteration-2-routing-bm3.angular-buch.com)
+  1. _[Dependency Injection](https://book-monkey3.angular-buch.com/iteration-2/di)_ - [Standalone Demo](https://iteration-2-di-bm3.angular-buch.com)
+  2. _[Routing](https://book-monkey3.angular-buch.com/iteration-2/routing)_ - [Standalone Demo](https://iteration-2-routing-bm3.angular-buch.com)
 * __Iteration 3 – HTTP & reaktive Programmierung__
-  1. _[HTTP](https://book-monkey3.angular-buch.com/iteration-3/http)_ - [Demo](https://iteration-3-http-bm3.angular-buch.com)
-  2. _[RxJS](https://book-monkey3.angular-buch.com/iteration-3/rxjs)_ - [Demo](https://iteration-3-rxjs-bm3.angular-buch.com)
-  3. _[Interceptors](https://book-monkey3.angular-buch.com/iteration-3/interceptors)_ - [Demo](https://iteration-3-interceptors-bm3.angular-buch.com)
+  1. _[HTTP](https://book-monkey3.angular-buch.com/iteration-3/http)_ - [Standalone Demo](https://iteration-3-http-bm3.angular-buch.com)
+  2. _[RxJS](https://book-monkey3.angular-buch.com/iteration-3/rxjs)_ - [Standalone Demo](https://iteration-3-rxjs-bm3.angular-buch.com)
+  3. _[Interceptors](https://book-monkey3.angular-buch.com/iteration-3/interceptors)_ - [Standalone Demo](https://iteration-3-interceptors-bm3.angular-buch.com)
 * __Iteration 4 – Formularverarbeitung & Validierung__
-  1. _[Template Driven Forms](https://book-monkey3.angular-buch.com/iteration-4/template-driven-forms)_ - [Demo](https://iteration-4-template-driven-forms-bm3.angular-buch.com)
-  2. _[Reactive Forms](https://book-monkey3.angular-buch.com/iteration-4/reactive-forms)_ - [Demo](https://iteration-4-reactive-forms-bm3.angular-buch.com)
-  3. _[Custom Validation](https://book-monkey3.angular-buch.com/iteration-4/custom-validation)_ - [Demo](https://iteration-4-custom-validation-bm3.angular-buch.com)
+  1. _[Template Driven Forms](https://book-monkey3.angular-buch.com/iteration-4/template-driven-forms)_ - [Standalone Demo](https://iteration-4-template-driven-forms-bm3.angular-buch.com)
+  2. _[Reactive Forms](https://book-monkey3.angular-buch.com/iteration-4/reactive-forms)_ - [Standalone Demo](https://iteration-4-reactive-forms-bm3.angular-buch.com)
+  3. _[Custom Validation](https://book-monkey3.angular-buch.com/iteration-4/custom-validation)_ - [Standalone Demo](https://iteration-4-custom-validation-bm3.angular-buch.com)
 * __Iteration 5 – Pipes & Direktiven__
-  1. _[Pipes](https://book-monkey3.angular-buch.com/iteration-5/pipes)_ - [Demo](https://iteration-5-pipes-bm3.angular-buch.com)
-  2. _[Direktiven](https://book-monkey3.angular-buch.com/iteration-5/directives)_ - [Demo](https://iteration-5-directives-bm3.angular-buch.com)
+  1. _[Pipes](https://book-monkey3.angular-buch.com/iteration-5/pipes)_ - [Standalone Demo](https://iteration-5-pipes-bm3.angular-buch.com)
+  2. _[Direktiven](https://book-monkey3.angular-buch.com/iteration-5/directives)_ - [Standalone Demo](https://iteration-5-directives-bm3.angular-buch.com)
 * __Iteration 6 – Module & fortgeschrittenes Routing__
-  1. _[Die Anwendung modularisieren](https://book-monkey3.angular-buch.com/iteration-6/modules)_ - [Demo](https://iteration-6-modules-bm3.angular-buch.com)
-  2. _[Lazy Loading](https://book-monkey3.angular-buch.com/iteration-6/lazy-loading)_ - [Demo](https://iteration-6-lazy-loading-bm3.angular-buch.com)
-  3. _[Guards](https://book-monkey3.angular-buch.com/iteration-6/guards)_ - [Demo](https://iteration-6-guards-bm3.angular-buch.com)
+  1. _[Die Anwendung modularisieren](https://book-monkey3.angular-buch.com/iteration-6/modules)_ - [Standalone Demo](https://iteration-6-modules-bm3.angular-buch.com)
+  2. _[Lazy Loading](https://book-monkey3.angular-buch.com/iteration-6/lazy-loading)_ - [Standalone Demo](https://iteration-6-lazy-loading-bm3.angular-buch.com)
+  3. _[Guards](https://book-monkey3.angular-buch.com/iteration-6/guards)_ - [Standalone Demo](https://iteration-6-guards-bm3.angular-buch.com)
 * __Iteration 7 – Internationalisierung (i18n)__
-  1. _[Internationalisierung (i18n)](https://book-monkey3.angular-buch.com/iteration-7/i18n)_ - [Demo](https://iteration-7-i18n-bm3.angular-buch.com)
+  1. _[Internationalisierung (i18n)](https://book-monkey3.angular-buch.com/iteration-7/i18n)_ - [Standalone Demo](https://iteration-7-i18n-bm3.angular-buch.com)
 
 Sie können die jeweiligen Änderungen hier vergleichen:  
 __[BookMonkey 3 Diffs](https://book-monkey3.angular-buch.com/diffs/)__
