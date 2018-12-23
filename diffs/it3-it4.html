@@ -1,0 +1,47 @@
+Usage: diff2html [options] -- [diff args]
+
+Options:
+  --version                        Show version number                 [boolean]
+  -s, --style                      Output style
+                            [string] [choices: "line", "side"] [default: "line"]
+  --sc, --synchronisedScroll       Synchronised horizontal scroll
+                 [string] [choices: "enabled", "disabled"] [default: "disabled"]
+  --su, --summary                  Show files summary
+              [string] [choices: "closed", "open", "hidden"] [default: "closed"]
+  --lm, --matching                 Diff line matching type
+                  [string] [choices: "lines", "words", "none"] [default: "none"]
+  --lmt, --matchWordsThreshold     Diff line matching word threshold
+                                                      [string] [default: "0.25"]
+  --lmm, --matchingMaxComparisons  Diff line matching maximum line comparisons
+                                   of a block of changes
+                                                      [string] [default: "1000"]
+  -f, --format                     Output format
+                            [string] [choices: "html", "json"] [default: "html"]
+  -d, --diff                       Diff style
+                            [string] [choices: "word", "char"] [default: "word"]
+  -i, --input                      Diff input source
+             [string] [choices: "file", "command", "stdin"] [default: "command"]
+  -o, --output                     Output destination
+                    [string] [choices: "preview", "stdout"] [default: "preview"]
+  -u, --diffy                      Upload to diffy.org
+                                [string] [choices: "browser", "pbcopy", "print"]
+  -F, --file                       Send output to file (overrides output option)
+                                                                        [string]
+  --hwt, --htmlWrapperTemplate     Use a custom template when generating markup
+                                                                        [string]
+  -h, --help                       Show help                           [boolean]
+
+Examples:
+  diff2html -s line -f html -d word -i      diff last commit, line by line, word
+  command -o preview -- -M HEAD~1           comparison between lines,previewed
+                                            in the browser and input from git
+                                            diff command
+  diff2html -i file -- my-file-diff.diff    reading the input from a file
+  diff2html -f json -o stdout -- -M HEAD~1  print json format to stdout
+  diff2html -F my-pretty-diff.html -- -M    print to file
+  HEAD~1
+
+© 2014-2018 rtfpessoa
+For more information, check out https://diff2html.xyz/
+For support, check out https://github.com/rtfpessoa/diff2html-cli
+
