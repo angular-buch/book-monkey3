@@ -37,9 +37,7 @@ Die einzelnen Schritte sind außerdem jeweils als einzelne Repositorys verfügba
 * __Iteration 7 – Internationalisierung (i18n)__
   1. _[Internationalisierung (i18n)](https://book-monkey3.angular-buch.com/iteration-7/i18n)_ - [Demo](https://iteration-7-i18n-bm3.angular-buch.com)
 
-Sie können die jeweiligen Änderungen hier vergleichen:  
-__[BookMonkey 3 Diffs](https://book-monkey3.angular-buch.com/diffs/)__
-
+book-monkey3.github.io
 
 # Das Buch
 
