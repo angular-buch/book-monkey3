@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
         this.repoName = parts[1] + '-' + parts[2];
       }
 
-      this.repositoryUrl = 'https://github.com/book-monkey3-build/' + this.repoName;
+      this.repositoryUrl = 'https://github.com/book-monkey3/' + this.repoName;
     });
 
     fromEvent(window, 'resize').pipe(
