@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { of, Observable } from 'rxjs';
 
 import { BookDetailsComponent } from './book-details.component';
@@ -62,8 +62,7 @@ describe('BookDetailsComponent', () => {
           { path: ':isbn', component: BookDetailsComponent }
         ])
       ]
-    })
-    .compileComponents();
+    });
   }));
 
   beforeEach(async(() => {

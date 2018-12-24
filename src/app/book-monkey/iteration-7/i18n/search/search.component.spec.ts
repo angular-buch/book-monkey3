@@ -49,8 +49,7 @@ describe('SearchComponent', () => {
       providers: [
         { provide: BookStoreService, useValue: bookStoreServiceStub }
       ]
-    })
-    .compileComponents();
+    });
   }));
 
   beforeEach(() => {

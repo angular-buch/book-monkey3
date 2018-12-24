@@ -17,8 +17,7 @@ describe('CreateBookComponent', () => {
         HttpClientTestingModule,
         RouterTestingModule
       ]
-    })
-    .compileComponents();
+    });
   }));
 
   beforeEach(() => {

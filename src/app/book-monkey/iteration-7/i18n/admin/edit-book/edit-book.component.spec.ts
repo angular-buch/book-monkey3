@@ -17,8 +17,7 @@ describe('EditBookComponent', () => {
         HttpClientTestingModule,
         RouterTestingModule
       ]
-    })
-    .compileComponents();
+    });
   }));
 
   beforeEach(() => {
