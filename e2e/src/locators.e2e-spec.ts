@@ -33,9 +33,9 @@ describe('protractor locators', () => {
     expect(element(by.css('h1 span')).getText()).toBe('with child');
   });
 
-  it('should select via the /*BS*/\$-shorthand/*BE*/', () => {
+  it('should select via the /*BS*/$-shorthand/*BE*/', () => {
     // is the same as element(by.css('\#myId'));
-    expect(/*BS*/\$/*BE*/(/*BS*/'\#myId'/*BE*/).getText()).toBe('Heading');
+    expect(/*BS*/$/*BE*/(/*BS*/'#myId'/*BE*/).getText()).toBe('Heading');
   });
 
   afterAll(() => browser.ignoreSynchronization = false);
