@@ -24,7 +24,7 @@ describe('protractor locators', () => {
   });
 
   it('should select /*BS*/by id/*BE*/', () => {
-    expect(element(by.css(/*BS*/'\#myId'/*BE*/)).getText()).toBe('Heading');
+    expect(element(by.css(/*BS*/'#myId'/*BE*/)).getText()).toBe('Heading');
     expect(element(by.id(/*BS*/'myId'/*BE*/)).getText()).toBe('Heading');
   });
 
