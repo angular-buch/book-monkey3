@@ -45,7 +45,7 @@ describe('BookStoreService', () => {
   });
 
   describe('#getAll', () => {
-    const apiUrl = 'https://api3.angular-buch.com/books';
+    const apiUrl = 'https://api3.angular-buch.com/secure/books';
 
     beforeEach(() => {
       bs = TestBed.get(BookStoreService);
@@ -82,7 +82,7 @@ describe('BookStoreService', () => {
 
 
   describe('#getSingle', () => {
-    const apiUrl = `https://api3.angular-buch.com/book`;
+    const apiUrl = `https://api3.angular-buch.com/secure/book`;
 
     beforeEach(() => {
       bs = TestBed.get(BookStoreService);
