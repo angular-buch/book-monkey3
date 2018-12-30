@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // HTTP_INTERCEPTORS are reset when a lazy loaded module imports another module importing HttpClientModule
 // see: https://github.com/angular/angular/issues/20575
-import { TokenInterceptor } from 'build-workspace/src/app/book-monkey/iteration-3/interceptors/shared/token-interceptor';
+import { TokenInterceptor } from './shared/token-interceptor';
 
 @NgModule({
   declarations: [
