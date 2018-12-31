@@ -1,4 +1,4 @@
-<div *ngIf="book; else errorMessage">
+<div *ngIf="book; else loading">
   <h1>{{ book.title }}</h1>
   <h3>{{ book.subtitle }}</h3>
   <div class="ui divider"></div>
@@ -43,6 +43,6 @@
   </a>
 </div>
 
-<ng-template #errorMessage>
+<ng-template #loading>
   <div class="ui active centered inline loader"></div>
 </ng-template>
