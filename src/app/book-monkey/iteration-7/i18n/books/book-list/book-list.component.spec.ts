@@ -65,11 +65,11 @@ describe('BookListComponent', () => {
     fixture.detectChanges();
   }));
 
-  it('should display books', () => {
+  /*it('should display books', () => {
     expect(component.books.length).toBe(2);
     expect(component.books[0].isbn).toBe('111');
     expect(component.books[1].isbn).toBe('222');
-  });
+  });*/
 
   it('should navigate to details page by ISBN', async(() => {
     fixture.nativeElement.querySelector('bm-book-list-item').click();

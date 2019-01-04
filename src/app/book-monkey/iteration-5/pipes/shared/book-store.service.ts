@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { throwError as observableThrowError,  Observable } from 'rxjs';
-import { retry, map, catchError } from 'rxjs/operators';
+import { throwError as observableThrowError,  Observable, of } from 'rxjs';
+import { retry, map, catchError, delay } from 'rxjs/operators';
 
 import { Book } from './book';
 import { BookRaw } from './book-raw';
@@ -16,14 +16,15 @@ export class BookStoreService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Book[]> {
-    return this.http.get<BookRaw[]>(`${this.api}/books`)
+    /*return this.http.get<BookRaw[]>(`${this.api}/books`)
       .pipe(
         retry(3),
         map(booksRaw =>
           booksRaw.map(b => BookFactory.fromRaw(b)),
         ),
         catchError(this.errorHandler)
-      );
+      );*/
+      return of([]).pipe(delay(1000));
   }
 
   getSingle(isbn: string): Observable<Book> {
