@@ -77,7 +77,7 @@ export class BookStoreService {
     );
   }
 
-  check(isbn: string): Observable<Boolean> {
+  check(isbn: string): Observable<boolean> {
     return this.http.get(
       `${this.api}/book/${isbn}/check`
     ).pipe(

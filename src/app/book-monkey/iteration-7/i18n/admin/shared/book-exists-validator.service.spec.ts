@@ -10,7 +10,7 @@ describe('BookExistsValidatorService', () => {
 
   let bookStoreServiceStub: Partial<BookStoreService>;
   bookStoreServiceStub = {
-    check: (isbn: string): Observable<Boolean> => {
+    check: (isbn: string): Observable<boolean> => {
       return isbn === '1111111111' ? of(true) : of(false);
     }
   };
