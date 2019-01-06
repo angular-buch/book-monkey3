@@ -91,7 +91,7 @@
 </svg></span>
       <a href="#d2h-278508" class="d2h-file-name">tmp/src/app/book-monkey/{iteration-5/directives → iteration-6/guards}/admin/book-form/book-form.component.ts</a>
       <span class="d2h-file-stats">
-          <span class="d2h-lines-added">+112</span>
+          <span class="d2h-lines-added">+116</span>
           <span class="d2h-lines-deleted">-0</span>
       </span>
     </span>
@@ -195,7 +195,7 @@
 </svg></span>
       <a href="#d2h-761990" class="d2h-file-name">tmp/src/app/book-monkey/{iteration-5/directives → iteration-6/guards}/admin/shared/book.validators.ts</a>
       <span class="d2h-file-stats">
-          <span class="d2h-lines-added">+24</span>
+          <span class="d2h-lines-added">+30</span>
           <span class="d2h-lines-deleted">-0</span>
       </span>
     </span>
@@ -2830,7 +2830,39 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,112 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,116 @@</div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -4277,7 +4309,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      isbn: [{ value: &#x27;&#x27;, disabled: this.editing }, [</span>
+            <span class="d2h-code-line-ctn">      isbn: [</span>
         </div>
     </td>
 </tr><tr>
@@ -4287,7 +4319,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        Validators.required,</span>
+            <span class="d2h-code-line-ctn">        { value: &#x27;&#x27;, disabled: this.editing },</span>
         </div>
     </td>
 </tr><tr>
@@ -4297,7 +4329,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        BookValidators.isbnFormat</span>
+            <span class="d2h-code-line-ctn">        [</span>
         </div>
     </td>
 </tr><tr>
@@ -4307,7 +4339,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ], this.editing ? null : [this.bookExistsValidator]],</span>
+            <span class="d2h-code-line-ctn">          Validators.required,</span>
         </div>
     </td>
 </tr><tr>
@@ -4317,7 +4349,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      description: [&#x27;&#x27;],</span>
+            <span class="d2h-code-line-ctn">          BookValidators.isbnFormat</span>
         </div>
     </td>
 </tr><tr>
@@ -4327,7 +4359,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      authors: this.buildAuthorsArray([&#x27;&#x27;]),</span>
+            <span class="d2h-code-line-ctn">        ],</span>
         </div>
     </td>
 </tr><tr>
@@ -4337,7 +4369,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      thumbnails: this.buildThumbnailsArray([</span>
+            <span class="d2h-code-line-ctn">        this.editing ? null : [this.bookExistsValidator]</span>
         </div>
     </td>
 </tr><tr>
@@ -4347,7 +4379,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">        { title: &#x27;&#x27;, url: &#x27;&#x27; }</span>
+            <span class="d2h-code-line-ctn">      ],</span>
         </div>
     </td>
 </tr><tr>
@@ -4357,7 +4389,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ]),</span>
+            <span class="d2h-code-line-ctn">      description: [&#x27;&#x27;],</span>
         </div>
     </td>
 </tr><tr>
@@ -4367,7 +4399,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      published: []</span>
+            <span class="d2h-code-line-ctn">      authors: this.buildAuthorsArray([&#x27;&#x27;]),</span>
         </div>
     </td>
 </tr><tr>
@@ -4377,7 +4409,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    });</span>
+            <span class="d2h-code-line-ctn">      thumbnails: this.buildThumbnailsArray([</span>
         </div>
     </td>
 </tr><tr>
@@ -4387,7 +4419,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">        { title: &#x27;&#x27;, url: &#x27;&#x27; }</span>
         </div>
     </td>
 </tr><tr>
@@ -4397,6 +4429,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      ]),</span>
         </div>
     </td>
 </tr><tr>
@@ -4406,7 +4439,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  private buildAuthorsArray(values: string[]): FormArray {</span>
+            <span class="d2h-code-line-ctn">      published: []</span>
         </div>
     </td>
 </tr><tr>
@@ -4416,7 +4449,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.fb.array(values, BookValidators.atLeastOneAuthor);</span>
+            <span class="d2h-code-line-ctn">    });</span>
         </div>
     </td>
 </tr><tr>
@@ -4445,7 +4478,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  private buildThumbnailsArray(values: Thumbnail[]): FormArray {</span>
+            <span class="d2h-code-line-ctn">  private buildAuthorsArray(values: string[]): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -4455,7 +4488,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.fb.array(</span>
+            <span class="d2h-code-line-ctn">    return this.fb.array(values, BookValidators.atLeastOneAuthor);</span>
         </div>
     </td>
 </tr><tr>
@@ -4465,7 +4498,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      values.map(t =&gt; this.fb.group(t))</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -4475,7 +4508,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -4485,7 +4517,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">  private buildThumbnailsArray(values: Thumbnail[]): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -4495,6 +4527,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    return this.fb.array(</span>
         </div>
     </td>
 </tr><tr>
@@ -4504,7 +4537,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  get authors(): FormArray {</span>
+            <span class="d2h-code-line-ctn">      values.map(t =&gt; this.fb.group(t))</span>
         </div>
     </td>
 </tr><tr>
@@ -4514,7 +4547,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;authors&#x27;) as FormArray;</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -4543,7 +4576,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  get thumbnails(): FormArray {</span>
+            <span class="d2h-code-line-ctn">  get authors(): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -4553,7 +4586,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;thumbnails&#x27;) as FormArray;</span>
+            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;authors&#x27;) as FormArray;</span>
         </div>
     </td>
 </tr><tr>
@@ -4582,7 +4615,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  addAuthorControl() {</span>
+            <span class="d2h-code-line-ctn">  get thumbnails(): FormArray {</span>
         </div>
     </td>
 </tr><tr>
@@ -4592,7 +4625,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.authors.push(this.fb.control(&#x27;&#x27;));</span>
+            <span class="d2h-code-line-ctn">    return this.bookForm.get(&#x27;thumbnails&#x27;) as FormArray;</span>
         </div>
     </td>
 </tr><tr>
@@ -4621,7 +4654,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  addThumbnailControl() {</span>
+            <span class="d2h-code-line-ctn">  addAuthorControl() {</span>
         </div>
     </td>
 </tr><tr>
@@ -4631,7 +4664,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.thumbnails.push(</span>
+            <span class="d2h-code-line-ctn">    this.authors.push(this.fb.control(&#x27;&#x27;));</span>
         </div>
     </td>
 </tr><tr>
@@ -4641,7 +4674,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      this.fb.group({ url: &#x27;&#x27;, title: &#x27;&#x27; })</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -4651,7 +4684,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -4661,7 +4693,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">  addThumbnailControl() {</span>
         </div>
     </td>
 </tr><tr>
@@ -4671,6 +4703,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.thumbnails.push(</span>
         </div>
     </td>
 </tr><tr>
@@ -4680,7 +4713,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  submitForm() {</span>
+            <span class="d2h-code-line-ctn">      this.fb.group({ url: &#x27;&#x27;, title: &#x27;&#x27; })</span>
         </div>
     </td>
 </tr><tr>
@@ -4690,7 +4723,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const formValue = this.bookForm.value;</span>
+            <span class="d2h-code-line-ctn">    );</span>
         </div>
     </td>
 </tr><tr>
@@ -4700,7 +4733,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const authors = formValue.authors</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -4710,7 +4743,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              .filter(author =&gt; author);</span>
         </div>
     </td>
 </tr><tr>
@@ -4720,7 +4752,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const thumbnails = formValue.thumbnails</span>
+            <span class="d2h-code-line-ctn">  submitForm() {</span>
         </div>
     </td>
 </tr><tr>
@@ -4730,7 +4762,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">              .filter(thumbnail =&gt; thumbnail.url);</span>
+            <span class="d2h-code-line-ctn">    const formValue = this.bookForm.value;</span>
         </div>
     </td>
 </tr><tr>
@@ -4740,6 +4772,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    const authors = formValue.authors</span>
         </div>
     </td>
 </tr><tr>
@@ -4749,7 +4782,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const newBook: Book = {</span>
+            <span class="d2h-code-line-ctn">              .filter(author =&gt; author);</span>
         </div>
     </td>
 </tr><tr>
@@ -4759,7 +4792,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ...formValue,</span>
+            <span class="d2h-code-line-ctn">    const thumbnails = formValue.thumbnails</span>
         </div>
     </td>
 </tr><tr>
@@ -4769,7 +4802,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      authors,</span>
+            <span class="d2h-code-line-ctn">              .filter(thumbnail =&gt; thumbnail.url);</span>
         </div>
     </td>
 </tr><tr>
@@ -4779,7 +4812,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      thumbnails</span>
         </div>
     </td>
 </tr><tr>
@@ -4789,7 +4821,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    };</span>
+            <span class="d2h-code-line-ctn">    const newBook: Book = {</span>
         </div>
     </td>
 </tr><tr>
@@ -4799,6 +4831,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      ...formValue,</span>
         </div>
     </td>
 </tr><tr>
@@ -4808,7 +4841,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.submitBook.emit(newBook);</span>
+            <span class="d2h-code-line-ctn">      authors,</span>
         </div>
     </td>
 </tr><tr>
@@ -4818,7 +4851,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.bookForm.reset();</span>
+            <span class="d2h-code-line-ctn">      thumbnails</span>
         </div>
     </td>
 </tr><tr>
@@ -4828,12 +4861,51 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">    };</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
       112
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      113
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.submitBook.emit(newBook);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      114
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.bookForm.reset();</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      115
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  }</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      116
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
@@ -7095,7 +7167,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      required: &#x27;Ein Buchtitel muss angegeben werden&#x27;</span>
+            <span class="d2h-code-line-ctn">      required: &#x27;Ein Buchtitel muss angegeben werden.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7125,7 +7197,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      required: &#x27;Es muss eine ISBN angegeben werden&#x27;,</span>
+            <span class="d2h-code-line-ctn">      required: &#x27;Es muss eine ISBN angegeben werden.&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -7135,7 +7207,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      isbnFormat: &#x27;Die ISBN muss aus 10 oder 13 Zeichen bestehen&#x27;,</span>
+            <span class="d2h-code-line-ctn">      isbnFormat: &#x27;Die ISBN muss aus 10 oder 13 Zeichen bestehen.&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -7145,7 +7217,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      isbnExists: &#x27;Die ISBN existiert bereits&#x27;</span>
+            <span class="d2h-code-line-ctn">      isbnExists: &#x27;Die ISBN existiert bereits.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7175,7 +7247,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      required: &#x27;Es muss ein Erscheinungsdatum angegeben werden&#x27;</span>
+            <span class="d2h-code-line-ctn">      required: &#x27;Es muss ein Erscheinungsdatum angegeben werden.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7205,7 +7277,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      atLeastOneAuthor: &#x27;Es muss ein Autor angegeben werden&#x27;</span>
+            <span class="d2h-code-line-ctn">      atLeastOneAuthor: &#x27;Es muss ein Autor angegeben werden.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7689,7 +7761,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { AbstractControl, AsyncValidator, ValidationErrors } from &#x27;@angular&#x2F;forms&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { FormControl, AsyncValidator, ValidationErrors } from &#x27;@angular&#x2F;forms&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -7699,7 +7771,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">import { Observable } from &#x27;rxjs&#x27;;</span>
+            <span class="d2h-code-line-ctn">import { Observable, of } from &#x27;rxjs&#x27;;</span>
         </div>
     </td>
 </tr><tr>
@@ -7825,7 +7897,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    control: AbstractControl</span>
+            <span class="d2h-code-line-ctn">    control: FormControl</span>
         </div>
     </td>
 </tr><tr>
@@ -7885,7 +7957,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      catchError(() =&gt; null)</span>
+            <span class="d2h-code-line-ctn">      catchError(() =&gt; of(null))</span>
         </div>
     </td>
 </tr><tr>
@@ -7942,7 +8014,55 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,24 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,30 @@</div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -8224,7 +8344,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const isolatedNumbers = control.value.replace(&#x2F;-&#x2F;g, &#x27;&#x27;);</span>
+            <span class="d2h-code-line-ctn">    const numbers = control.value.replace(&#x2F;-&#x2F;g, &#x27;&#x27;);</span>
         </div>
     </td>
 </tr><tr>
@@ -8244,7 +8364,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return isbnPattern.test(isolatedNumbers) ? null : {</span>
         </div>
     </td>
 </tr><tr>
@@ -8254,7 +8373,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      isbnFormat: { valid: false }</span>
+            <span class="d2h-code-line-ctn">    if (isbnPattern.test(numbers)) {</span>
         </div>
     </td>
 </tr><tr>
@@ -8264,7 +8383,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    };</span>
+            <span class="d2h-code-line-ctn">      return null;</span>
         </div>
     </td>
 </tr><tr>
@@ -8274,7 +8393,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">    } else {</span>
         </div>
     </td>
 </tr><tr>
@@ -8284,6 +8403,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      return {</span>
         </div>
     </td>
 </tr><tr>
@@ -8293,7 +8413,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  static atLeastOneAuthor(controlArray: FormArray): ValidationErrors | null {</span>
+            <span class="d2h-code-line-ctn">        isbnFormat: { valid: false }</span>
         </div>
     </td>
 </tr><tr>
@@ -8303,7 +8423,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const check = controlArray.controls.some(el =&gt; {</span>
+            <span class="d2h-code-line-ctn">      };</span>
         </div>
     </td>
 </tr><tr>
@@ -8313,7 +8433,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      return (el.value) ? true : false;</span>
+            <span class="d2h-code-line-ctn">    }</span>
         </div>
     </td>
 </tr><tr>
@@ -8323,7 +8443,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    });</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -8333,7 +8453,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return check ? null : {</span>
         </div>
     </td>
 </tr><tr>
@@ -8343,7 +8462,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      atLeastOneAuthor: { valid: false }</span>
+            <span class="d2h-code-line-ctn">  static atLeastOneAuthor(controlArray: FormArray): ValidationErrors | null {</span>
         </div>
     </td>
 </tr><tr>
@@ -8353,7 +8472,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    };</span>
+            <span class="d2h-code-line-ctn">    if (controlArray.controls.some(el =&gt; el.value)) {</span>
         </div>
     </td>
 </tr><tr>
@@ -8363,7 +8482,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">      return null;</span>
         </div>
     </td>
 </tr><tr>
@@ -8373,11 +8492,71 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    } else {</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
       24
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      return {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      25
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">        atLeastOneAuthor: { valid: false }</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      26
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      };</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      27
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    }</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      28
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  }</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      29
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      30
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
