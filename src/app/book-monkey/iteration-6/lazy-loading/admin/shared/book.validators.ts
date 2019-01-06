@@ -5,20 +5,26 @@ export class BookValidators {
   static isbnFormat(control: FormControl): ValidationErrors | null {
     if (!control.value) { return null; }
 
-    const isolatedNumbers = control.value.replace(/-/g, '');
+    const numbers = control.value.replace(/-/g, '');
     const isbnPattern = /(^\d{10}$)|(^\d{13}$)/;
-    return isbnPattern.test(isolatedNumbers) ? null : {
-      isbnFormat: { valid: false }
-    };
+
+    if (isbnPattern.test(numbers)) {
+      return null;
+    } else {
+      return {
+        isbnFormat: { valid: false }
+      };
+    }
   }
 
   static atLeastOneAuthor(controlArray: FormArray): ValidationErrors | null {
-    const check = controlArray.controls.some(el => {
-      return (el.value) ? true : false;
-    });
-    return check ? null : {
-      atLeastOneAuthor: { valid: false }
-    };
+    if (controlArray.controls.some(el => el.value)) {
+      return null;
+    } else {
+      return {
+        atLeastOneAuthor: { valid: false }
+      };
+    }
   }
 
 }

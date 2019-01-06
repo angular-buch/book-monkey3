@@ -52,10 +52,14 @@ export class BookFormComponent implements OnInit, OnChanges {
     this.bookForm = this.fb.group({
       title: ['', Validators.required],
       subtitle: [''],
-      isbn: [{ value: '', disabled: this.editing }, [
-        Validators.required,
-        BookValidators.isbnFormat
-      ], this.editing ? null : [this.bookExistsValidator]],
+      isbn: [
+        { value: '', disabled: this.editing },
+        [
+          Validators.required,
+          BookValidators.isbnFormat
+        ],
+        this.editing ? null : [this.bookExistsValidator]
+      ],
       description: [''],
       authors: this.buildAuthorsArray(['']),
       thumbnails: this.buildThumbnailsArray([
