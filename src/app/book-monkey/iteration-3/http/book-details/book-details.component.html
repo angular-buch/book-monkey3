@@ -1,6 +1,6 @@
 <div *ngIf="book; else loading">
   <h1>{{ book.title }}</h1>
-  <h3>{{ book.subtitle }}</h3>
+  <h3 *ngIf="book.subtitle">{{ book.subtitle }}</h3>
   <div class="ui divider"></div>
   <div class="ui grid">
     <div class="four wide column">
