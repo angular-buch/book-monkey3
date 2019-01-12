@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CanNavigateToAdminGuard implements CanActivate {
-  
-  accessGranted = false; 
+
+  accessGranted = false;
 
   canActivate(): boolean {
     if (!this.accessGranted) {
