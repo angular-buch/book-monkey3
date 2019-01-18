@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, tap, switchMap } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, tap, switchMap, filter } from 'rxjs/operators';
 
 import { Book } from '../shared/book';
 import { BookStoreService } from '../shared/book-store.service';
@@ -20,6 +20,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     this.keyup$.pipe(
+      filter(term => term.length >= 3),
       debounceTime(500),
       distinctUntilChanged(),
       tap(() => this.isLoading = true),

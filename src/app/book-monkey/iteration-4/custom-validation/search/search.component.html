@@ -1,7 +1,7 @@
 <div class="ui search" [class.loading]="isLoading">
   <div class="ui icon input">
-    <input class="prompt" type="text" #searchTerm
-      (keyup)="keyup$.next(searchTerm.value)">
+    <input type="text" class="prompt"
+      (keyup)="keyup$.next($event.target.value)">
     <i class="search icon"></i>
   </div>
 
