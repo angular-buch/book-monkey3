@@ -12,14 +12,14 @@ import { BookStoreService } from '../shared/book-store.service';
 })
 export class SearchComponent implements OnInit {
 
-  keyup$ = new Subject<string>();
+  keyUp$ = new Subject<string>();
   isLoading = false;
   foundBooks: Book[] = [];
 
   constructor(private bs: BookStoreService) { }
 
   ngOnInit() {
-    this.keyup$.pipe(
+    this.keyUp$.pipe(
       filter(term => term.length >= 3),
       debounceTime(500),
       distinctUntilChanged(),
