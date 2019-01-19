@@ -5,8 +5,8 @@
     <i class="search icon"></i>
   </div>
 
-  <div class="results transition"
-    [class.visible]="foundBooks.length">
+  <div class="results transition visible"
+    *ngIf="foundBooks.length">
     <a class="result"
       *ngFor="let book of foundBooks"
       [routerLink]="['..', 'books', book.isbn]">
