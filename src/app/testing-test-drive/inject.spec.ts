@@ -4,12 +4,13 @@
 import { ErrorHandler } from '@angular/core';
 import { inject } from '@angular/core/testing';
 
-describe('inject() creates an injector', () => {
+describe('inject()', () => {
 
-  it('and injects the specified objects into the test',
+  it('should inject the dependencies into the test',
 
-    inject([ErrorHandler], (errrorHandler: ErrorHandler) => {
-      errrorHandler.handleError('Es ist ein Fehler aufgetreten!');
+    inject([ErrorHandler], (errorHandler: ErrorHandler) => {
+      errorHandler.handleError(
+        new Error('Es ist ein Fehler aufgetreten!'));
     })
 
   );
