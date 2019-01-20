@@ -1,107 +1,61 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { Book } from './book';
+import { BookRaw } from './book-raw';
 import { BookStoreService } from './book-store.service';
 
 describe('BookStoreService', () => {
-  let httpClient: HttpClient;
   let httpMock: HttpTestingController;
-  let bs: BookStoreService;
+  let service: BookStoreService;
 
-  const expectedBooks: Book[] = [
+  const bookRaw: BookRaw[] = [
     {
       isbn: '111',
       title: 'Book 1',
       authors: [],
-      published: new Date()
+      published: '2019-01-01T00:00:00.000Z'
     },
     {
       isbn: '222',
       title: 'Book 2',
       authors: [],
-      published: new Date()
+      published: '2019-01-01T00:00:00.000Z'
     }
   ];
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      // Import HttpClient mocking services
-      imports: [ HttpClientTestingModule ],
-      // provide service-under-test
-      providers: [ BookStoreService ]
+      imports: [HttpClientTestingModule],
+      providers: [BookStoreService]
     });
 
-    // Inject http, test controller and service-under-test to be referenced by each test
-    httpClient = TestBed.get(HttpClient);
+    // statt inject() verwenden wir hier mal TestBed.get
     httpMock = TestBed.get(HttpTestingController);
-    bs = TestBed.get(BookStoreService);
+    service = TestBed.get(BookStoreService);
+  });
+
+  it('should GET a list of all books', () => {
+
+    let receivedBooks: Book[];
+    service.getAll().subscribe(books => receivedBooks = books);
+
+    // BookStoreService soll einen GET request gegen die richtige URL angestoßen haben
+    const req = httpMock.expectOne('https://api3.angular-buch.com/secure/books');
+    expect(req.request.method).toEqual('GET');
+
+    // jetzt werden Bücher emittiert
+    req.flush(bookRaw);
+
+    expect(receivedBooks.length).toBe(2);
+    expect(receivedBooks[0].isbn).toBe('111');
+    expect(receivedBooks[1].isbn).toBe('222');
+
+    expect(receivedBooks[0].published).toEqual(new Date('2019-01-01T00:00:00.000Z'));
   });
 
   afterEach(() => {
-    // asserrt that there are no more pending reuests after every test
+    // Prüfung, ob kein weiter unerwarteter Request angestoßen wurde
     httpMock.verify();
   });
-
-  describe('#getAll', () => {
-    const apiUrl = 'https://api3.angular-buch.com/secure/books';
-
-    beforeEach(() => {
-      bs = TestBed.get(BookStoreService);
-    });
-
-    it('should GET a list of all books', () => {
-      bs.getAll().subscribe(
-        books => expect(books).toEqual(expectedBooks, 'should return expected books'),
-        fail
-      );
-
-      // BookStoreService should have made one request to get Books from expected URL
-      const req = httpMock.expectOne(apiUrl);
-      expect(req.request.method).toEqual('GET');
-
-      // respond with the mock
-      req.flush(expectedBooks);
-    });
-
-    it('should be OK to return no books', () => {
-      bs.getAll().subscribe(
-        books => expect(books.length).toEqual(0, 'should have empty books array'),
-        fail
-      );
-
-      // BookStoreService should have made one request to get Books from expected URL
-      const req = httpMock.expectOne(apiUrl);
-      expect(req.request.method).toEqual('GET');
-
-      // respond with the mock
-      req.flush([]);
-    });
-  });
-
-
-  describe('#getSingle', () => {
-    const apiUrl = `https://api3.angular-buch.com/secure/book`;
-
-    beforeEach(() => {
-      bs = TestBed.get(BookStoreService);
-    });
-
-    it('should return the matching book reuqested by ID', () => {
-      bs.getSingle('111').subscribe(
-        book => expect(book).toEqual(expectedBooks[0], 'should return expected books'),
-        fail
-      );
-
-      // BookStoreService should have made one request to get Books from expected URL
-      const req = httpMock.expectOne(`${apiUrl}/111`);
-      expect(req.request.method).toEqual('GET');
-
-      // respond with the mock
-      req.flush(expectedBooks[0]);
-    });
-
-  });
-
 });
