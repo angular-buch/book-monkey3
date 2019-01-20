@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { throwError as observableThrowError,  Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { throwError, Observable } from 'rxjs';
 import { retry, map, catchError } from 'rxjs/operators';
 
 import { Book } from './book';
@@ -58,7 +58,8 @@ export class BookStoreService {
     );
   }
 
-  private errorHandler(error: Error | any): Observable<any> {
-    return observableThrowError(error);
+  private errorHandler(error: HttpErrorResponse): Observable<any> {
+    console.error('Fehler aufgetreten!');
+    return throwError(error);
   }
 }
