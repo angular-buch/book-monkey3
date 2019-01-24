@@ -104,8 +104,11 @@ export class BookFormComponent implements OnInit, OnChanges {
     const thumbnails = formValue.thumbnails
               .filter(thumbnail => thumbnail.url);
 
+    const isbn = this.editing ? this.book.isbn : formValue.isbn;
+
     const newBook: Book = {
       ...formValue,
+      isbn,
       authors,
       thumbnails
     };
