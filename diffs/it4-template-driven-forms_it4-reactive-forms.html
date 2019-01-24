@@ -104,7 +104,7 @@
 </svg></span>
       <a href="#d2h-174246" class="d2h-file-name">tmp/src/app/book-monkey/iteration-4/{template-driven-forms → reactive-forms}/book-form/book-form.component.ts</a>
       <span class="d2h-file-stats">
-          <span class="d2h-lines-added">+92</span>
+          <span class="d2h-lines-added">+95</span>
           <span class="d2h-lines-deleted">-13</span>
       </span>
     </span>
@@ -3120,7 +3120,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -1,29 +1,108 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -1,29 +1,111 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-del">
@@ -3399,6 +3399,30 @@
         <div class="d2h-code-side-line d2h-del">
             <span class="d2h-code-line-prefix">-</span>
             <span class="d2h-code-line-ctn">  <del>ngOnInit</del>() {</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
         </div>
     </td>
 </tr><tr>
@@ -5082,7 +5106,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const newBook: Book = {</span>
+            <span class="d2h-code-line-ctn">    const isbn = this.editing ? this.book.isbn : formValue.isbn;</span>
         </div>
     </td>
 </tr><tr>
@@ -5092,7 +5116,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      ...formValue,</span>
         </div>
     </td>
 </tr><tr>
@@ -5102,7 +5125,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      authors,</span>
+            <span class="d2h-code-line-ctn">    const newBook: Book = {</span>
         </div>
     </td>
 </tr><tr>
@@ -5112,7 +5135,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      thumbnails</span>
+            <span class="d2h-code-line-ctn">      ...formValue,</span>
         </div>
     </td>
 </tr><tr>
@@ -5122,7 +5145,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    };</span>
+            <span class="d2h-code-line-ctn">      isbn,</span>
         </div>
     </td>
 </tr><tr>
@@ -5132,6 +5155,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">      authors,</span>
         </div>
     </td>
 </tr><tr>
@@ -5141,7 +5165,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.submitBook.emit(newBook);</span>
+            <span class="d2h-code-line-ctn">      thumbnails</span>
         </div>
     </td>
 </tr><tr>
@@ -5151,12 +5175,41 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    };</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      107
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      108
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.submitBook.emit(newBook);</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      109
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
             <span class="d2h-code-line-ctn">    this.bookForm.reset();</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      107
+      110
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
@@ -5166,7 +5219,7 @@
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      108
+      111
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
