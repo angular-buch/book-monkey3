@@ -11,6 +11,7 @@
       *ngFor="let book of foundBooks"
       [routerLink]="['..', 'books', book.isbn]">
       {{ book.title }}
+      <p class="description">{{ book.subtitle }}</p>
     </a>
   </div>
 </div>
