@@ -30,7 +30,6 @@ describe('BookStoreService', () => {
       providers: [BookStoreService]
     });
 
-    // statt inject() verwenden wir hier mal TestBed.get
     httpMock = TestBed.get(HttpTestingController);
     service = TestBed.get(BookStoreService);
   });
@@ -38,14 +37,15 @@ describe('BookStoreService', () => {
   it('should GET a list of all books', () => {
 
     let receivedBooks: Book[];
-    service.getAll().subscribe(books => receivedBooks = books);
+    service.getAll().subscribe(books => receivedBooks = books); 
 
-    // BookStoreService soll einen GET request gegen die richtige URL angestoßen haben
-    const req = httpMock.expectOne('https://api3.angular-buch.com/secure/books');
-    expect(req.request.method).toEqual('GET');
+    // Request aus der Warteschlange holen
+    const req = httpMock.expectOne(
+      'https://api3.angular-buch.com/secure/books');
+    expect(req.request.method).toEqual('GET'); 
 
-    // jetzt werden Bücher emittiert
-    req.flush(bookRaw);
+    // flush -- jetzt werden die Bücher emittiert
+    req.flush(bookRaw); 
 
     expect(receivedBooks.length).toBe(2);
     expect(receivedBooks[0].isbn).toBe('111');
@@ -55,7 +55,7 @@ describe('BookStoreService', () => {
   });
 
   afterEach(() => {
-    // Prüfung, ob kein weiter unerwarteter Request angestoßen wurde
-    httpMock.verify();
+    // prüfen ob kein Request übrig geblieben ist
+    httpMock.verify(); 
   });
 });
