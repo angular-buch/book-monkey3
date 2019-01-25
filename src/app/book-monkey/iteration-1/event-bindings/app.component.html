@@ -1,3 +1,10 @@
-<bm-book-list *ngIf="viewState === 'list'" (showDetailsEvent)="showDetails($event)"></bm-book-list>
-<bm-book-details *ngIf="viewState === 'detail'" (showListEvent)="showList()" [book]="book"></bm-book-details>
+<bm-book-list
+  *ngIf="viewState === 'list'"
+  (showDetailsEvent)="showDetails($event)"></bm-book-list>
+
+<bm-book-details
+  *ngIf="viewState === 'detail'"
+  (showListEvent)="showList()"
+  [book]="book"></bm-book-details>
+
 <router-outlet></router-outlet>
