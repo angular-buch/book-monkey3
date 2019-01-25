@@ -66,7 +66,7 @@
       <a href="#d2h-467677" class="d2h-file-name">tmp/src/app/book-monkey/iteration-2/{di → routing}/app.component.html</a>
       <span class="d2h-file-stats">
           <span class="d2h-lines-added">+4</span>
-          <span class="d2h-lines-deleted">-2</span>
+          <span class="d2h-lines-deleted">-9</span>
       </span>
     </span>
 </li>
@@ -777,7 +777,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -1,3 +1,5 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -1,10 +1,5 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-del">
@@ -786,7 +786,7 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line d2h-del">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">&lt;<del>bm-book-list</del> <del>*ngIf</del>=&quot;<del>viewState</del> <del>=== &#x27;list&#x27;&quot; (showDetailsEvent)=&quot;showDetails($event)&quot;&gt;&lt;&#x2F;bm-book-list&gt;</del></span>
+            <span class="d2h-code-line-ctn">&lt;<del>bm-book-list</del></span>
         </div>
     </td>
 </tr><tr>
@@ -796,28 +796,80 @@
     <td class="d2h-del">
         <div class="d2h-code-side-line d2h-del">
             <span class="d2h-code-line-prefix">-</span>
-            <span class="d2h-code-line-ctn">&lt;<del>bm-book-details</del> <del>*ngIf</del>=&quot;<del>viewState</del> <del>=== &#x27;detail&#x27;&quot; (showListEvent)=&quot;showList()&quot; [book]=&quot;book&quot;&gt;&lt;&#x2F;bm-book-details</del>&gt;</span>
+            <span class="d2h-code-line-ctn">  <del>*ngIf</del>=&quot;<del>viewState</del> <del>=== &#x27;list&#x27;&quot;</del></span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
+    <td class="d2h-code-side-linenumber d2h-del">
+      3
     </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+    <td class="d2h-del">
+        <div class="d2h-code-side-line d2h-del">
+            <span class="d2h-code-line-prefix">-</span>
+            <span class="d2h-code-line-ctn">  <del>(showDetailsEvent)=&quot;showDetails($event)&quot;&gt;&lt;&#x2F;bm-book-list</del>&gt;</span>
         </div>
     </td>
 </tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
+    <td class="d2h-code-side-linenumber d2h-del">
+      4
     </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+    <td class="d2h-del">
+        <div class="d2h-code-side-line d2h-del">
+            <span class="d2h-code-line-prefix">-</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-del">
+      5
+    </td>
+    <td class="d2h-del">
+        <div class="d2h-code-side-line d2h-del">
+            <span class="d2h-code-line-prefix">-</span>
+            <span class="d2h-code-line-ctn">&lt;bm-book-details</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-del">
+      6
+    </td>
+    <td class="d2h-del">
+        <div class="d2h-code-side-line d2h-del">
+            <span class="d2h-code-line-prefix">-</span>
+            <span class="d2h-code-line-ctn">  *ngIf=&quot;viewState === &#x27;detail&#x27;&quot;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-del">
+      7
+    </td>
+    <td class="d2h-del">
+        <div class="d2h-code-side-line d2h-del">
+            <span class="d2h-code-line-prefix">-</span>
+            <span class="d2h-code-line-ctn">  (showListEvent)=&quot;showList()&quot;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-del">
+      8
+    </td>
+    <td class="d2h-del">
+        <div class="d2h-code-side-line d2h-del">
+            <span class="d2h-code-line-prefix">-</span>
+            <span class="d2h-code-line-ctn">  [book]=&quot;book&quot;&gt;&lt;&#x2F;bm-book-details&gt;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-del">
+      9
+    </td>
+    <td class="d2h-del">
+        <div class="d2h-code-side-line d2h-del">
+            <span class="d2h-code-line-prefix">-</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-cntx">
-      3
+      10
     </td>
     <td class="d2h-cntx">
         <div class="d2h-code-side-line d2h-cntx">
@@ -846,7 +898,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&lt;<ins>div</ins> <ins>class</ins>=&quot;<ins>ui</ins> <ins>menu&quot;&gt;</ins></span>
+            <span class="d2h-code-line-ctn">&lt;<ins>div class=&quot;ui menu&quot;&gt;</ins></span>
         </div>
     </td>
 </tr><tr>
@@ -856,7 +908,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn"><ins>  </ins>&lt;<ins>a</ins> <ins>routerLink</ins>=&quot;<ins>home&quot;  routerLinkActive=&quot;active&quot;</ins> <ins>class=&quot;item&quot;&gt;Home&lt;&#x2F;a</ins>&gt;</span>
+            <span class="d2h-code-line-ctn">  <ins>&lt;a routerLink</ins>=&quot;<ins>home&quot;  routerLinkActive=&quot;active&quot;</ins> <ins>class=&quot;item&quot;&gt;Home&lt;&#x2F;a&gt;</ins></span>
         </div>
     </td>
 </tr><tr>
@@ -866,7 +918,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  &lt;a routerLink=&quot;books&quot; routerLinkActive=&quot;active&quot; class=&quot;item&quot;&gt;Bücher&lt;&#x2F;a&gt;</span>
+            <span class="d2h-code-line-ctn">  <ins>&lt;a routerLink=&quot;books&quot; routerLinkActive=&quot;active&quot; class=&quot;item&quot;&gt;Bücher&lt;&#x2F;a</ins>&gt;</span>
         </div>
     </td>
 </tr><tr>
@@ -876,7 +928,47 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">&lt;&#x2F;div&gt;</span>
+            <span class="d2h-code-line-ctn"><ins>&lt;&#x2F;div&gt;</ins></span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
         </div>
     </td>
 </tr><tr>
