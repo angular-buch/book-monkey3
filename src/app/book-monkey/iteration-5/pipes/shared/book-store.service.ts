@@ -16,15 +16,14 @@ export class BookStoreService {
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<Book[]> {
-    /*return this.http.get<BookRaw[]>(`${this.api}/books`)
+    return this.http.get<BookRaw[]>(`${this.api}/books`)
       .pipe(
         retry(3),
         map(booksRaw =>
           booksRaw.map(b => BookFactory.fromRaw(b)),
         ),
         catchError(this.errorHandler)
-      );*/
-      return of([]).pipe(delay(1000));
+      );
   }
 
   getSingle(isbn: string): Observable<Book> {
