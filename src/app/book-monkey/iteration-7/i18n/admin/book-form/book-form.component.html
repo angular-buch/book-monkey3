@@ -38,7 +38,7 @@
       *ngFor="let c of authors.controls; index as i">
       <input placeholder="Autor {{ i+1 }}"
         i18n-placeholder="@@BookFormComponent:author placeholder"
-        [formControlName]="i" >
+        [formControlName]="i">
     </div>
   </div>
   <bm-form-messages
