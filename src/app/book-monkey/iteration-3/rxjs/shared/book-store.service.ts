@@ -45,7 +45,6 @@ export class BookStoreService {
     );
   }
 
-  // NEU
   getAllSearch(searchTerm: string): Observable<Book[]> {
     return this.http.get<BookRaw[]>(
       `${this.api}/books/search/${searchTerm}`
