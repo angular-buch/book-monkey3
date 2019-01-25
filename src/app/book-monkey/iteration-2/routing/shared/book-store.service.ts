@@ -40,11 +40,11 @@ export class BookStoreService {
     ];
   }
 
-  getAll() {
+  getAll(): Book[] {
     return this.books;
   }
 
-  getSingle(isbn) {
+  getSingle(isbn: string): Book {
     return this.books.find(book => book.isbn === isbn);
   }
 }

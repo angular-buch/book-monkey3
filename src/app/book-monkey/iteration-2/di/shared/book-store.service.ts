@@ -40,7 +40,7 @@ export class BookStoreService {
     ];
   }
 
-  getAll() {
+  getAll(): Book[] {
     return this.books;
   }
 }
