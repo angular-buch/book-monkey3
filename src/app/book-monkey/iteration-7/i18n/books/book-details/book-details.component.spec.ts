@@ -19,7 +19,7 @@ const expectedBook = {
 };
 
 @Component({ template: '<router-outlet></router-outlet>' })
-class DummyOutletComponent { }
+class TestOutletComponent { }
 
 class BookStoreServiceMock {
   getSingle(isbn: string): Observable<Book> {
@@ -38,7 +38,7 @@ describe('BookDetailsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        DummyOutletComponent,
+        TestOutletComponent,
         BookDetailsComponent,
         IsbnPipe,
         DelayDirective
@@ -66,7 +66,7 @@ describe('BookDetailsComponent', () => {
   }));
 
   beforeEach(async(() => {
-    TestBed.createComponent(DummyOutletComponent);
+    TestBed.createComponent(TestOutletComponent);
     fixture = TestBed.createComponent(BookDetailsComponent);
     component = fixture.componentInstance;
     nativeEl = fixture.nativeElement;

@@ -8,7 +8,7 @@ import { IsbnPipe } from '../shared/isbn.pipe';
   selector: 'bm-book-list',
   template: '<bm-book-list-item [book]="b"></bm-book-list-item>'
 })
-class DummyHostComponent {
+class TestHostComponent {
   b = {
     isbn: '111',
     title: 'Book 1',
@@ -18,14 +18,14 @@ class DummyHostComponent {
 }
 
 describe('BookListItemComponent', () => {
-  let testHost: DummyHostComponent;
-  let fixture: ComponentFixture<DummyHostComponent>;
+  let testHost: TestHostComponent;
+  let fixture: ComponentFixture<TestHostComponent>;
   let nativeEl: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        DummyHostComponent,
+        TestHostComponent,
         BookListItemComponent,
         IsbnPipe
       ]
@@ -33,7 +33,7 @@ describe('BookListItemComponent', () => {
   }));
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(DummyHostComponent);
+    fixture = TestBed.createComponent(TestHostComponent);
     testHost = fixture.componentInstance;
     nativeEl  = fixture.nativeElement.querySelector('bm-book-list-item');
     fixture.detectChanges();

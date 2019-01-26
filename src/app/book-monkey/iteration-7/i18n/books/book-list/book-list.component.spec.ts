@@ -8,14 +8,14 @@ import { BookListComponent } from './book-list.component';
 import { BookStoreService } from '../../shared/book-store.service';
 import { Book } from '../../shared/book';
 
-@Component({ template: 'Dummy' })
-class DummyDetailsComponent { }
+@Component({ template: '' })
+class TestDetailsComponent { }
 
 @Component({
   selector: 'bm-book-list-item',
-  template: 'Dummy'
+  template: ''
 })
-class DummyBookListItemComponent {
+class TestBookListItemComponent {
   @Input() book: Book;
 }
 
@@ -43,8 +43,8 @@ describe('BookListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         BookListComponent,
-        DummyBookListItemComponent,
-        DummyDetailsComponent
+        TestBookListItemComponent,
+        TestDetailsComponent
       ],
       providers: [{
         provide: BookStoreService,
@@ -52,7 +52,7 @@ describe('BookListComponent', () => {
       }],
       imports: [
         RouterTestingModule.withRoutes([
-          { path: ':isbn', component: DummyDetailsComponent }
+          { path: ':isbn', component: TestDetailsComponent }
         ])
       ]
     });
