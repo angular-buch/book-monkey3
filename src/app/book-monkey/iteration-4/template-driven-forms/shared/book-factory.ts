@@ -11,7 +11,9 @@ export class BookFactory {
       published: new Date(),
       subtitle: '',
       rating: 0,
-      thumbnails: [{url: '', title: ''}],
+      thumbnails: [
+        { url: '', title: '' }
+      ],
       description: ''
     };
   }
