@@ -36,7 +36,6 @@ export class BookStoreService {
     );
   }
 
-  // NEU
   create(book: Book): Observable<any> {
     return this.http.post(
       `${this.api}/book`,

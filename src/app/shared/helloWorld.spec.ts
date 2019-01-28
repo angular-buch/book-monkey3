@@ -4,7 +4,7 @@ class DeepThought {
   }
 }
 
-describe("Deep Thought", () => {
+describe('Deep Thought', () => {
 
   let deepThought;
 
@@ -12,8 +12,8 @@ describe("Deep Thought", () => {
     deepThought = new DeepThought();
   });
 
-  it("should know the answer to life, the universe and everything", () => {
-    let answer = deepThought.getAlmightyAnswer();
+  it('should know the answer to life, the universe and everything', () => {
+    const answer = deepThought.getAlmightyAnswer();
     expect(answer).toBeGreaterThan(0);
   });
 });
