@@ -1,6 +1,8 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
-@Directive({ selector: '[bmZoom]'})
+@Directive({
+  selector: '[bmZoom]'
+})
 export class ZoomDirective {
   @HostBinding('class.small') isZoomed: boolean;
 
