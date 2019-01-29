@@ -130,7 +130,7 @@
 </svg></span>
       <a href="#d2h-585802" class="d2h-file-name">tmp/src/app/book-monkey/iteration-5/{pipes → directives}/shared/zoom.directive.ts</a>
       <span class="d2h-file-stats">
-          <span class="d2h-lines-added">+13</span>
+          <span class="d2h-lines-added">+15</span>
           <span class="d2h-lines-deleted">-0</span>
       </span>
     </span>
@@ -1972,7 +1972,23 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,13 @@</div>
+        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,15 @@</div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+      
+    </td>
+    <td class="d2h-cntx d2h-emptyplaceholder">
+        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
+        </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -2118,7 +2134,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">@Directive({ selector: &#x27;[bmZoom]&#x27;})</span>
+            <span class="d2h-code-line-ctn">@Directive({</span>
         </div>
     </td>
 </tr><tr>
@@ -2128,7 +2144,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">export class ZoomDirective {</span>
+            <span class="d2h-code-line-ctn">  selector: &#x27;[bmZoom]&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -2138,7 +2154,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  @HostBinding(&#x27;class.small&#x27;) isZoomed: boolean;</span>
+            <span class="d2h-code-line-ctn">})</span>
         </div>
     </td>
 </tr><tr>
@@ -2148,6 +2164,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">export class ZoomDirective {</span>
         </div>
     </td>
 </tr><tr>
@@ -2157,7 +2174,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  @HostListener(&#x27;mouseenter&#x27;) onMouseEnter() {</span>
+            <span class="d2h-code-line-ctn">  @HostBinding(&#x27;class.small&#x27;) isZoomed: boolean;</span>
         </div>
     </td>
 </tr><tr>
@@ -2167,7 +2184,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.isZoomed = true;</span>
         </div>
     </td>
 </tr><tr>
@@ -2177,7 +2193,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">  @HostListener(&#x27;mouseenter&#x27;) onMouseEnter() {</span>
         </div>
     </td>
 </tr><tr>
@@ -2187,7 +2203,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  @HostListener(&#x27;mouseleave&#x27;) onMouseLeave() {</span>
+            <span class="d2h-code-line-ctn">    this.isZoomed = true;</span>
         </div>
     </td>
 </tr><tr>
@@ -2197,7 +2213,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    this.isZoomed = false;</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -2207,12 +2223,32 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
+            <span class="d2h-code-line-ctn">  @HostListener(&#x27;mouseleave&#x27;) onMouseLeave() {</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
       13
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    this.isZoomed = false;</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      14
+    </td>
+    <td class="d2h-ins">
+        <div class="d2h-code-side-line d2h-ins">
+            <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  }</span>
+        </div>
+    </td>
+</tr><tr>
+    <td class="d2h-code-side-linenumber d2h-ins">
+      15
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
