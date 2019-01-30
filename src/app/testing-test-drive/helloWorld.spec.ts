@@ -8,7 +8,6 @@ describe('Deep Thought', () => {
 
   // Arrange
   let deepThought;
-
   beforeEach(() => {
     deepThought = new DeepThought();
   });
