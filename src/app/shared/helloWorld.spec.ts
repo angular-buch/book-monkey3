@@ -6,6 +6,7 @@ class DeepThought {
 
 describe('Deep Thought', () => {
 
+  // Arrange
   let deepThought;
 
   beforeEach(() => {
@@ -13,7 +14,11 @@ describe('Deep Thought', () => {
   });
 
   it('should know the answer to life, the universe and everything', () => {
+
+    // Act
     const answer = deepThought.getAlmightyAnswer();
+
+    // Assert
     expect(answer).toBeGreaterThan(0);
   });
 });
