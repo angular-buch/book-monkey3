@@ -11,7 +11,7 @@ describe('BookListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
         declarations: [BookListComponent],
-        schemas: [NO_ERRORS_SCHEMA]
+        schemas: [NO_ERRORS_SCHEMA] // NEU
       })
       .compileComponents();
   }));
