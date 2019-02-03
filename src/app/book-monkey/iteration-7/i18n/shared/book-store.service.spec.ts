@@ -55,7 +55,7 @@ describe('BookStoreService', () => {
   });
 
   afterEach(() => {
-    // prüfen ob kein Request übrig geblieben ist
+    // prüfen, ob kein Request übrig geblieben ist
     httpMock.verify(); 
   });
 });
