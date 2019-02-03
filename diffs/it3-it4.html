@@ -195,7 +195,7 @@
 </svg></span>
       <a href="#d2h-579773" class="d2h-file-name">tmp/src/app/book-monkey/{iteration-3/interceptors → iteration-4/custom-validation}/form-messages/form-messages.component.ts</a>
       <span class="d2h-file-stats">
-          <span class="d2h-lines-added">+51</span>
+          <span class="d2h-lines-added">+50</span>
           <span class="d2h-lines-deleted">-0</span>
       </span>
     </span>
@@ -7152,15 +7152,7 @@
                     <tr>
     <td class="d2h-code-side-linenumber d2h-info"></td>
     <td class="d2h-info">
-        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,51 @@</div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-      
-    </td>
-    <td class="d2h-cntx d2h-emptyplaceholder">
-        <div class="d2h-code-side-line d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
-        </div>
+        <div class="d2h-code-side-line d2h-info">@@ -0,0 +1,50 @@</div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-code-side-emptyplaceholder d2h-cntx d2h-emptyplaceholder">
@@ -7710,6 +7702,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  private allMessages = {</span>
         </div>
     </td>
 </tr><tr>
@@ -7719,7 +7712,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  private allMessages = {</span>
+            <span class="d2h-code-line-ctn">    title: {</span>
         </div>
     </td>
 </tr><tr>
@@ -7729,7 +7722,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    title: {</span>
+            <span class="d2h-code-line-ctn">      required: &#x27;Ein Buchtitel muss angegeben werden.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7739,7 +7732,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      required: &#x27;Ein Buchtitel muss angegeben werden.&#x27;</span>
+            <span class="d2h-code-line-ctn">    },</span>
         </div>
     </td>
 </tr><tr>
@@ -7749,7 +7742,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    },</span>
+            <span class="d2h-code-line-ctn">    isbn: {</span>
         </div>
     </td>
 </tr><tr>
@@ -7759,7 +7752,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    isbn: {</span>
+            <span class="d2h-code-line-ctn">      required: &#x27;Es muss eine ISBN angegeben werden.&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -7769,7 +7762,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      required: &#x27;Es muss eine ISBN angegeben werden.&#x27;,</span>
+            <span class="d2h-code-line-ctn">      isbnFormat: &#x27;Die ISBN muss aus 10 oder 13 Zeichen bestehen.&#x27;,</span>
         </div>
     </td>
 </tr><tr>
@@ -7779,7 +7772,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      isbnFormat: &#x27;Die ISBN muss aus 10 oder 13 Zeichen bestehen.&#x27;,</span>
+            <span class="d2h-code-line-ctn">      isbnExists: &#x27;Die ISBN existiert bereits.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7789,7 +7782,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      isbnExists: &#x27;Die ISBN existiert bereits.&#x27;</span>
+            <span class="d2h-code-line-ctn">    },</span>
         </div>
     </td>
 </tr><tr>
@@ -7799,7 +7792,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    },</span>
+            <span class="d2h-code-line-ctn">    published: {</span>
         </div>
     </td>
 </tr><tr>
@@ -7809,7 +7802,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    published: {</span>
+            <span class="d2h-code-line-ctn">      required: &#x27;Es muss ein Erscheinungsdatum angegeben werden.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7819,7 +7812,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      required: &#x27;Es muss ein Erscheinungsdatum angegeben werden.&#x27;</span>
+            <span class="d2h-code-line-ctn">    },</span>
         </div>
     </td>
 </tr><tr>
@@ -7829,7 +7822,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    },</span>
+            <span class="d2h-code-line-ctn">    authors: {</span>
         </div>
     </td>
 </tr><tr>
@@ -7839,7 +7832,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    authors: {</span>
+            <span class="d2h-code-line-ctn">      atLeastOneAuthor: &#x27;Es muss ein Autor angegeben werden.&#x27;</span>
         </div>
     </td>
 </tr><tr>
@@ -7849,7 +7842,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      atLeastOneAuthor: &#x27;Es muss ein Autor angegeben werden.&#x27;</span>
+            <span class="d2h-code-line-ctn">    }</span>
         </div>
     </td>
 </tr><tr>
@@ -7859,7 +7852,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    }</span>
+            <span class="d2h-code-line-ctn">  };</span>
         </div>
     </td>
 </tr><tr>
@@ -7869,7 +7862,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  };</span>
         </div>
     </td>
 </tr><tr>
@@ -7879,6 +7871,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  constructor() { }</span>
         </div>
     </td>
 </tr><tr>
@@ -7888,7 +7881,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  constructor() { }</span>
         </div>
     </td>
 </tr><tr>
@@ -7898,6 +7890,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  ngOnInit() {</span>
         </div>
     </td>
 </tr><tr>
@@ -7907,7 +7900,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  ngOnInit() {</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -7917,7 +7910,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -7927,6 +7919,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">  errorsForControl(): string[] {</span>
         </div>
     </td>
 </tr><tr>
@@ -7936,7 +7929,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  errorsForControl(): string[] {</span>
+            <span class="d2h-code-line-ctn">    const messages = this.allMessages[this.controlName];</span>
         </div>
     </td>
 </tr><tr>
@@ -7946,7 +7939,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    const messages = this.allMessages[this.controlName];</span>
         </div>
     </td>
 </tr><tr>
@@ -7956,6 +7948,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    if (</span>
         </div>
     </td>
 </tr><tr>
@@ -7965,7 +7958,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    if (</span>
+            <span class="d2h-code-line-ctn">      !this.control ||</span>
         </div>
     </td>
 </tr><tr>
@@ -7975,7 +7968,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      !this.control ||</span>
+            <span class="d2h-code-line-ctn">      !this.control.errors ||</span>
         </div>
     </td>
 </tr><tr>
@@ -7985,7 +7978,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      !this.control.errors ||</span>
+            <span class="d2h-code-line-ctn">      !messages ||</span>
         </div>
     </td>
 </tr><tr>
@@ -7995,7 +7988,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      !messages ||</span>
+            <span class="d2h-code-line-ctn">      !this.control.dirty</span>
         </div>
     </td>
 </tr><tr>
@@ -8005,7 +7998,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      !this.control.dirty</span>
+            <span class="d2h-code-line-ctn">    ) { return null; }</span>
         </div>
     </td>
 </tr><tr>
@@ -8015,7 +8008,6 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    ) { return null; }</span>
         </div>
     </td>
 </tr><tr>
@@ -8025,6 +8017,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
+            <span class="d2h-code-line-ctn">    return Object.keys(this.control.errors)</span>
         </div>
     </td>
 </tr><tr>
@@ -8034,7 +8027,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">    return Object.keys(this.control.errors)</span>
+            <span class="d2h-code-line-ctn">      .map(err =&gt; messages[err]);</span>
         </div>
     </td>
 </tr><tr>
@@ -8044,7 +8037,7 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">      .map(err =&gt; messages[err]);</span>
+            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
@@ -8054,21 +8047,11 @@
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
             <span class="d2h-code-line-prefix">+</span>
-            <span class="d2h-code-line-ctn">  }</span>
         </div>
     </td>
 </tr><tr>
     <td class="d2h-code-side-linenumber d2h-ins">
       50
-    </td>
-    <td class="d2h-ins">
-        <div class="d2h-code-side-line d2h-ins">
-            <span class="d2h-code-line-prefix">+</span>
-        </div>
-    </td>
-</tr><tr>
-    <td class="d2h-code-side-linenumber d2h-ins">
-      51
     </td>
     <td class="d2h-ins">
         <div class="d2h-code-side-line d2h-ins">
