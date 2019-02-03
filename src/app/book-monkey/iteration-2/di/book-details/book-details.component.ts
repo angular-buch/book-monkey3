@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Book } from '../shared/book';
 
@@ -7,9 +7,12 @@ import { Book } from '../shared/book';
   templateUrl: './book-details.component.html',
   styleUrls: ['./book-details.component.css']
 })
-export class BookDetailsComponent {
+export class BookDetailsComponent implements OnInit {
   @Input() book: Book;
   @Output() showListEvent = new EventEmitter<any>();
+
+  ngOnInit() {
+  }
 
   getRating(num: number) {
     return new Array(num);

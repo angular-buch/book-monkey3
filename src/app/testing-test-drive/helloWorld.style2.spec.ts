@@ -6,17 +6,17 @@ export class DeepThought {
 
 describe('Deep Thought', () => {
 
-  let deepThought;
+  let deepThought, answer;
   beforeEach(() => {
 
     // Arrange
     deepThought = new DeepThought();
+
+    // Act
+    answer = deepThought.getAlmightyAnswer();
   });
 
   it('should know the answer to life, the universe and everything', () => {
-
-    // Act
-    const answer = deepThought.getAlmightyAnswer();
 
     // Assert
     expect(answer).toBeGreaterThan(0);

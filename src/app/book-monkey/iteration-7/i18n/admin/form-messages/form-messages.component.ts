@@ -11,7 +11,6 @@ export class FormMessagesComponent implements OnInit {
   @Input() control: AbstractControl;
   @Input() controlName: string;
 
-
   private allMessages = {
     title: {
       required: 'Ein Buchtitel muss angegeben werden.'
