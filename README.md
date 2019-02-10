@@ -1,8 +1,8 @@
-# ACHTUNG
+# ⚠️ ACHTUNG: Repo für 2. Auflage
 
-Sind Sie auf der Suche nach dem Beispielprojekt für das Angular-Buch?
-Dann ist dies das falsche Repo. :innocent:
-Den Code zum Buch finden Sie im Repo [`book-monkey2`](https://github.com/angular-buch/book-monkey2).
+> Sind Sie auf der Suche nach dem Beispielprojekt für das Angular-Buch, 1. Auflage?
+> Dann ist dies das falsche Repo. :innocent:
+> Den Code zum Buch finden Sie im Repo [`book-monkey2`](https://github.com/angular-buch/book-monkey2).
 
 
 # BookMonkey 3
