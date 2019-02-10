@@ -13,31 +13,30 @@ export class BookListComponent implements OnInit {
   ngOnInit() {
     this.books = [
       {
-        isbn: '9783864903571',
+        isbn: '9783864906466',
         title: 'Angular',
-        authors: ['Johannes Hoppe', 'Danny Koppenhagen', 'Ferdinand Malcher', 'Gregor Woiwode'],
-        published: new Date(2017, 3, 1),
-        subtitle: `Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript - ab Angular 4,
-          inklusive NativeScript und Redux`,
+        authors: ['Ferdinand Malcher', 'Johannes Hoppe', 'Danny Koppenhagen'],
+        published: new Date(2019, 4, 30),
+        subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices – mit NativeScript und NgRx',
         rating: 5,
         thumbnails: [{
-          url: 'https://ng-buch.de/cover2.jpg',
+          url: 'https://api3.angular-buch.com/images/angular_auflage2.jpg',
           title: 'Buchcover'
         }],
-        description: 'Mit Angular setzen Sie auf ein modernes und modulares...'
+        description: 'Die Autoren führen Sie mit einem anspruchsvollen Beispielprojekt durch die Welt von Angular...'
       },
       {
-        isbn: '9783864901546',
-        title: 'AngularJS',
-        authors: ['Philipp Tarasiewicz', 'Robin Böhm'],
-        published: new Date(2014, 5, 29),
-        subtitle: 'Eine praktische Einführung',
-        rating: 5,
+        isbn: '9783864903274',
+        title: 'React',
+        authors: ['Oliver Zeigermann', 'Nils Hartmann'],
+        published: new Date(2016, 6, 17),
+        subtitle: 'Die praktische Einführung in React, React Router und Redux',
+        rating: 3,
         thumbnails: [{
-          url: 'https://ng-buch.de/cover1.jpg',
+          url: 'https://api3.angular-buch.com/images/react.jpg',
           title: 'Buchcover'
         }],
-        description: 'Dieses Buch führt Sie anhand eines zusammenhängenden Beispielprojekts...'
+        description: 'React ist ein JavaScript-Framework zur Entwicklung von Benutzeroberflächen...'
       }
     ];
   }
