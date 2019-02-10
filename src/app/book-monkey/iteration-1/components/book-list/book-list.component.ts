@@ -17,7 +17,7 @@ export class BookListComponent implements OnInit {
         title: 'Angular',
         authors: ['Ferdinand Malcher', 'Johannes Hoppe', 'Danny Koppenhagen'],
         published: new Date(2019, 4, 30),
-        subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices – mit NativeScript und NgRx',
+        subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices - mit NativeScript und NgRx',
         rating: 5,
         thumbnails: [{
           url: 'https://api3.angular-buch.com/images/angular_auflage2.jpg',
