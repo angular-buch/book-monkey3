@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import localeDe from '@angular/common/locales/de';
+import { registerLocaleData } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module.one-app';
 import { AppComponent } from './app.component';
@@ -25,4 +27,8 @@ import { TokenInterceptor } from './shared/token-interceptor';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeDe);
+  }
+}

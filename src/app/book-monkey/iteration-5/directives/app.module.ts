@@ -3,6 +3,8 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DateValueAccessorModule } from 'angular-date-value-accessor';
+import localeDe from '@angular/common/locales/de';
+import { registerLocaleData } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module.one-app';
 import { AppComponent } from './app.component';
@@ -49,4 +51,8 @@ import { DelayDirective } from './shared/delay.directive';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeDe);
+  }
+}
