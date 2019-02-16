@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID, Inject } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import localeDe from '@angular/common/locales/de';
+import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module.one-app';
@@ -23,12 +24,15 @@ import { TokenInterceptor } from './shared/token-interceptor';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
-    { provide: LOCALE_ID, useValue: 'de' }
+    // { provide: LOCALE_ID, useValue: 'de' }
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor() {
+  constructor(@Inject(LOCALE_ID) locale: string) {
     registerLocaleData(localeDe);
+    registerLocaleData(localeFr);
+
+    console.log('Current Locale', locale);
   }
 }
