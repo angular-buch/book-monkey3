@@ -8,7 +8,7 @@ Den Code zum Buch finden Sie im Repo [`book-monkey2`](https://github.com/angular
 # BookMonkey 3
 [![Monkey](src/assets/images/monkey-thinking.png)](http://book-monkey3.angular-buch.com/)
 
-Der __"BookMonkey"__ ist das Demo-Projekt zum Buch ["Angular: Grundlagen, fortgeschrittene Techniken und Best Practices mit TypeScript"](https://angular-buch.com/).
+Der __"BookMonkey"__ ist das Demo-Projekt zum Buch ["Angular: Grundlagen, fortgeschrittene Themen und Best Practices – mit NativeScript und NgRx"](https://angular-buch.com/).
 Mithilfe dieses Buchs werden Sie Googles neuestes Framework kennenlernen.
 Wir laden Sie dazu ein, mit den aktuellsten Technologien moderne Single-Page-Anwendungen zu erstellen.
 
