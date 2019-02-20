@@ -52,7 +52,7 @@ __[BookMonkey 3 Diffs](https://book-monkey3.angular-buch.com/diffs/)__
 
 Lesen Sie mehr auf [angular-buch.com](https://angular-buch.com/).
 
-[![Book](https://api3.angular-buch.com/images/angular_auflage2.jpg)](https://angular-buch.com/)
+[![Book](https://api3.angular-buch.com/images/angular_auflage2_small.jpg)](https://angular-buch.com/)
 
 
 
