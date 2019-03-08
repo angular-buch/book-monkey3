@@ -55,7 +55,7 @@
               "i18nLocale": "de"
             },
 
-            "en": {
+            "production-en": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -94,7 +94,7 @@
               "browserTarget": "BookMonkey:build:production"
             },
             "en": {
-              "browserTarget": "BookMonkey:build:en"
+              "browserTarget": "BookMonkey:build:production-en"
             }
           }
         },
