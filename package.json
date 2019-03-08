@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start-de": "ng serve --configuration=en",
-    "start-fr": "ng serve --configuration=fr",
+    "start-de": "ng serve --prod",
+    "start-en": "ng serve --configuration=production-en",
     "extract-i18n": "ng xi18n --i18nFormat=xmb"
   },
   "private": true,

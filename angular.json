@@ -78,8 +78,8 @@
                   "maximumError": "5mb"
                 }
               ],
-              "i18nFile": "src/messages.en.xlf",
-              "i18nFormat": "xlf",
+              "i18nFile": "src/messages.en.xtb",
+              "i18nFormat": "xtb",
               "i18nLocale": "en"
             }
           }
@@ -93,7 +93,7 @@
             "production": {
               "browserTarget": "BookMonkey:build:production"
             },
-            "en": {
+            "production-en": {
               "browserTarget": "BookMonkey:build:production-en"
             }
           }
