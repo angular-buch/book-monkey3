@@ -36,7 +36,7 @@
   <div class="fields" formArrayName="authors">
     <div class="sixteen wide field"
       *ngFor="let c of authors.controls; index as i">
-      <input placeholder="Autor {{ i+1 }}"
+      <input placeholder="Autor"
         [formControlName]="i">
     </div>
   </div>

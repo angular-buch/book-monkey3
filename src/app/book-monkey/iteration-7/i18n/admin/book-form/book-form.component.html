@@ -30,13 +30,14 @@
 
   <label i18n="@@BookFormComponent:book authors">Autoren</label>
   <button type="button" class="ui mini button"
-    (click)="addAuthorControl()">
+    (click)="addAuthorControl()"
+    i18n="@@BookFormComponent:add author">
     + Autor
   </button>
   <div class="fields" formArrayName="authors">
     <div class="sixteen wide field"
       *ngFor="let c of authors.controls; index as i">
-      <input placeholder="Autor {{ i+1 }}"
+      <input placeholder="Autor"
         i18n-placeholder="@@BookFormComponent:author placeholder"
         [formControlName]="i">
     </div>
@@ -51,7 +52,8 @@
 
   <label i18n="@@BookFormComponent:book thumbnails">Bilder</label>
   <button type="button" class="ui mini button"
-    (click)="addThumbnailControl()">
+    (click)="addThumbnailControl()"
+    i18n="@@BookFormComponent:add thumbnail">
     + Bild
   </button>
   <div formArrayName="thumbnails">
