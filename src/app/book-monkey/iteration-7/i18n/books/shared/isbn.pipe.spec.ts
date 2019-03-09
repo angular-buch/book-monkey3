@@ -17,6 +17,7 @@ describe('IsbnPipe', () => {
   });
 
   it('should format an ISBN with a dash', () => {
-    expect(pipe.transform('9783864903571')).toBe('978-3864903571'); 
+    expect(pipe.transform('9783864903571'))
+      .toBe('978-3864903571'); 
   });
 });

@@ -8,7 +8,8 @@ describe('inject()', () => {
 
   it('should inject the dependencies into the test',
 
-    inject([ErrorHandler], (errorHandler: ErrorHandler) => {
+    inject([ErrorHandler],
+      (errorHandler: ErrorHandler) => {
       errorHandler.handleError(
         new Error('Es ist ein Fehler aufgetreten!'));
     })

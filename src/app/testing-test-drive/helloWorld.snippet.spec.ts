@@ -12,7 +12,7 @@ describe('Deep Thought', () => {
     // ...Assert!
   });
 
-  it('should also work for another specification', () => {
+  it('should also work for another spec', () => {
     console.log(deepThought);
   });
 });

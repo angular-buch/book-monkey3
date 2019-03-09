@@ -6,7 +6,7 @@ describe('Angular Buch', () => {
   beforeAll(() => /*BS*/browser.waitForAngularEnabled(false)/*BE*/);
 
   it('should be called Angular', () => {
-    /*BS*/browser/*BE*/.get('http://dpunkt.de/buecher/12400/9783864903571-angular.html');
+    /*BS*/browser/*BE*/.get('https://www.dpunkt.de/buecher/13231.html');
     const heading = /*BS*/element/*BE*/(/*BS*/by.tagName('h1')/*BE*/);
     expect(heading.getText()).toEqual('Angular');
   });

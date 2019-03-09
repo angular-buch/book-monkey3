@@ -42,7 +42,8 @@ describe('BookStoreService', () => {
   });
 
   it('should GET a list of all books',
-    inject([BookStoreService], (service: BookStoreService) => {
+    inject([BookStoreService],
+      (service: BookStoreService) => {
 
       let receivedBooks: Book[];
       service.getAll().subscribe(b => receivedBooks = b);

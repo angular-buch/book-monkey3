@@ -11,7 +11,7 @@ describe('TestBed.get()', () => {
     errorHandler = TestBed.get(ErrorHandler); 
   });
 
-  it('should also retrieve dependencies for the test', () => {
+  it('should also retrieve dependencies', () => {
 
     errorHandler.handleError(
       new Error('Es ist ein Fehler aufgetreten!'));

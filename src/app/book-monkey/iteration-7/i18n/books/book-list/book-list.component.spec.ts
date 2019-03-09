@@ -77,7 +77,8 @@ describe('BookListComponent', () => {
 
   it('should navigate to details page by ISBN', async(() => {
 
-    fixture.nativeElement.querySelector('bm-book-list-item').click();
+    fixture.nativeElement
+      .querySelector('bm-book-list-item').click();
     fixture.whenStable().then(() => {
       expect(location.path()).toEqual('/111');
     });
