@@ -20,7 +20,7 @@ export class BookListComponent implements OnInit {
         subtitle: 'Grundlagen, fortgeschrittene Themen und Best Practices - mit NativeScript und NgRx',
         rating: 5,
         thumbnails: [{
-          url: 'https://api3.angular-buch.com/images/angular_auflage2.jpg',
+          url: 'https://ng-buch.de/buch1.jpg',
           title: 'Buchcover'
         }],
         description: 'Die Autoren führen Sie mit einem anspruchsvollen Beispielprojekt durch die Welt von Angular...'
@@ -33,7 +33,7 @@ export class BookListComponent implements OnInit {
         subtitle: 'Die praktische Einführung in React, React Router und Redux',
         rating: 3,
         thumbnails: [{
-          url: 'https://api3.angular-buch.com/images/react.jpg',
+          url: 'https://ng-buch.de/buch2.jpg',
           title: 'Buchcover'
         }],
         description: 'React ist ein JavaScript-Framework zur Entwicklung von Benutzeroberflächen...'
