@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, fakeAsync, tick, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { Observable, of } from 'rxjs';
@@ -14,14 +14,14 @@ describe('SearchComponent', () => {
 
   const bookDb: Book[] = [
     {
-      isbn: '111',
+      isbn: '12345',
       title: 'Book 1',
       subtitle: 'Subtitle Book 1',
       authors: ['author1'],
       published: new Date()
     },
     {
-      isbn: '112',
+      isbn: '67890',
       title: 'Book 2',
       authors: ['author1', 'author2'],
       published: new Date(2015, 1, 1)
@@ -59,30 +59,23 @@ describe('SearchComponent', () => {
     bs = TestBed.get(BookStoreService);
   });
 
-  it('should return objects containing the given search term', () => {
-    bs.getAllSearch('111')
-      .subscribe(res => {
-        expect(res).toEqual([bookDb[0]]);
-      });
-    bs.getAllSearch('or2')
-      .subscribe(res => {
-        expect(res).toEqual([bookDb[1]]);
-      });
-    bs.getAllSearch('Sub')
-      .subscribe(res => {
-        expect(res).toEqual([bookDb[0]]);
-      });
-    bs.getAllSearch('11')
-      .subscribe(res => {
-        expect(res).toEqual([...bookDb]);
-      });
-    bs.getAllSearch('abcdefg')
-      .subscribe(res => {
-        expect(res).toEqual([]);
-      });
-    bs.getAllSearch('2015')
-      .subscribe(res => {
-        expect(res).toEqual([bookDb[1]]);
-      });
-  });
+  it('should return objects containing the given search term', fakeAsync(() => {
+    fixture.detectChanges();
+    component.keyUp$.next('Book');
+    expect(component.foundBooks).toEqual([]);
+    expect(component.isLoading).toBeFalsy();
+    tick(500);
+    expect(component.foundBooks).toEqual([bookDb[0], bookDb[1]]);
+    expect(component.isLoading).toBeFalsy();
+  }));
+
+  it('should not return anything when entering less then three characters', fakeAsync(() => {
+    fixture.detectChanges();
+    component.keyUp$.next('12');
+    expect(component.foundBooks).toEqual([]);
+    expect(component.isLoading).toBeFalsy();
+    tick(500);
+    expect(component.foundBooks).toEqual([]);
+    expect(component.isLoading).toBeFalsy();
+  }));
 });
