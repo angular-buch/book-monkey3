@@ -14,7 +14,7 @@ export class BookFormComponent implements OnInit {
   book = BookFactory.empty();
 
   @Output() submitBook = new EventEmitter<Book>();
-  @ViewChild('bookForm') bookForm: NgForm;
+  @ViewChild('bookForm', { static: true }) bookForm: NgForm;
 
   
   submitForm() {

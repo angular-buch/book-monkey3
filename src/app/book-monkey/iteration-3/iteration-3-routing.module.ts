@@ -9,9 +9,9 @@ export const routes: Routes = [
     component: Iteration3Component,
     children: [
       { path: '', redirectTo: 'http', pathMatch: 'full' },
-      { path: 'http', loadChildren: 'src/app/book-monkey/iteration-3/http/app.module#AppModule' },
-      { path: 'rxjs', loadChildren: 'src/app/book-monkey/iteration-3/rxjs/app.module#AppModule' },
-      { path: 'interceptors', loadChildren: 'src/app/book-monkey/iteration-3/interceptors/app.module#AppModule' }
+      { path: 'http', loadChildren: () => import('src/app/book-monkey/iteration-3/http/app.module').then(m => m.AppModule) },
+      { path: 'rxjs', loadChildren: () => import('src/app/book-monkey/iteration-3/rxjs/app.module').then(m => m.AppModule) },
+      { path: 'interceptors', loadChildren: () => import('src/app/book-monkey/iteration-3/interceptors/app.module').then(m => m.AppModule) }
     ]
   }
 ];

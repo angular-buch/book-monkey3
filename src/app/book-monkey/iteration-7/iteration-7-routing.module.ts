@@ -9,7 +9,7 @@ export const routes: Routes = [
     component: Iteration7Component,
     children: [
       { path: '', redirectTo: 'i18n', pathMatch: 'full' },
-      { path: 'i18n', loadChildren: 'src/app/book-monkey/iteration-7/i18n/app.module#AppModule' },
+      { path: 'i18n', loadChildren: () => import('src/app/book-monkey/iteration-7/i18n/app.module').then(m => m.AppModule) },
     ]
   }
 ];

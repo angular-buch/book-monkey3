@@ -15,11 +15,11 @@ export const routes: Routes = [
   },
   {
     path: 'books',
-    loadChildren: 'src/app/book-monkey/iteration-6/lazy-loading/books/books.module#BooksModule'
+    loadChildren: () => import('src/app/book-monkey/iteration-6/lazy-loading/books/books.module').then(m => m.BooksModule)
   },
   {
     path: 'admin',
-    loadChildren: 'src/app/book-monkey/iteration-6/lazy-loading/admin/admin.module#AdminModule'
+    loadChildren: () => import('src/app/book-monkey/iteration-6/lazy-loading/admin/admin.module').then(m => m.AdminModule)
   }
 ];
 

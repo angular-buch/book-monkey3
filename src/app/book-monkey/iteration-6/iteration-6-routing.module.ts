@@ -9,9 +9,9 @@ export const routes: Routes = [
     component: Iteration6Component,
     children: [
       { path: '', redirectTo: 'modules', pathMatch: 'full' },
-      { path: 'modules', loadChildren: 'src/app/book-monkey/iteration-6/modules/app.module#AppModule' },
-      { path: 'lazy-loading', loadChildren: 'src/app/book-monkey/iteration-6/lazy-loading/app.module#AppModule' },
-      { path: 'guards', loadChildren: 'src/app/book-monkey/iteration-6/guards/app.module#AppModule' }
+      { path: 'modules', loadChildren: () => import('src/app/book-monkey/iteration-6/modules/app.module').then(m => m.AppModule) },
+      { path: 'lazy-loading', loadChildren: () => import('src/app/book-monkey/iteration-6/lazy-loading/app.module').then(m => m.AppModule) },
+      { path: 'guards', loadChildren: () => import('src/app/book-monkey/iteration-6/guards/app.module').then(m => m.AppModule) }
     ]
   }
 ];
