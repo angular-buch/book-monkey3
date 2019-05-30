@@ -54,7 +54,7 @@ describe('BookStoreService', () => {
   });
 
   afterEach(() => {
-    // asserrt that there are no more pending reuests after every test
+    // assert that there are no more pending reuests after every test
     httpMock.verify();
   });
 
