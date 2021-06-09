@@ -1,9 +1,8 @@
-# ACHTUNG
-
-Sind Sie auf der Suche nach dem Beispielprojekt für das Angular-Buch?
-Dann ist dies das falsche Repo. :innocent:
-Den Code zum Buch finden Sie im Repo [`book-monkey2`](https://github.com/angular-buch/book-monkey2).
-
+> ## :warning: Achtung
+> Dies ist das Beispielprojekt für das Angular-Buch der **2. Auflage**!
+Falls Sie eine andere Version des Buchs besitzen, finden Sie den Beispielcode in folgenden anderen Repositorys:
+> * [1. Auflage: `book-monkey2`](https://github.com/angular-buch/book-monkey2)
+> * [3. Auflage: `book-monkey4`](https://github.com/angular-buch/book-monkey4)
 
 # BookMonkey 3
 [![Monkey](src/assets/images/monkey-thinking.png)](http://book-monkey3.angular-buch.com/)
